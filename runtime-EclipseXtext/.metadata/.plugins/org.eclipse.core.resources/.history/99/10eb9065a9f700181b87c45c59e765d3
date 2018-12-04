@@ -1,0 +1,9 @@
+Mission: Swek
+	tasks: Hoi Endmission
+
+Task: Hoi
+	action: 	Drive SLOW Until GREEN LAKE Found
+	detectors: 	Avoid LAKE 	By MoveBackwards 10 meters and 
+									Turn 3 degrees and
+									MoveBackwards 101 meters
+									

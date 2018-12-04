@@ -1,0 +1,13 @@
+package mars.ru.des.robot;
+
+import org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.xtext.example.mydsl.myDsl.Greeting;
+import org.xtext.example.mydsl.myDsl.Test;
+
+public class MyDslqnp extends DefaultDeclarativeQualifiedNameProvider {
+	QualifiedName qualifiedName(Greeting e) {
+        Test p = (Test) e.eContainer();
+        return QualifiedName.create(p.getSName(), e.getSample().getSName());
+    }
+}

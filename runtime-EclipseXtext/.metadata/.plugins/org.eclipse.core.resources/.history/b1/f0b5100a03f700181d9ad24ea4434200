@@ -1,0 +1,5 @@
+Task: Hoi
+	action: 	Drive SLOW Until LAKE Found
+	detectors: 	Avoid GREEN LAKE 	By MoveBackwards 10 meters and 
+									Turn 60 degrees and
+									MoveBackwards 10 meters

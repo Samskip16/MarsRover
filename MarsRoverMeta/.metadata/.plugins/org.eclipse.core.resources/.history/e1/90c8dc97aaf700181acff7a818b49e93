@@ -1,0 +1,14 @@
+package mars.ru.des.robot;
+
+import org.eclipse.xtext.naming.DefaultDeclarativeQualifiedNameProvider;
+import org.eclipse.xtext.naming.QualifiedName;
+
+import mars.ru.des.robot.taskDSL.Task;
+
+public class MyDSLqnp extends DefaultDeclarativeQualifiedNameProvider {
+	
+	QualifiedName qualifiedName(Task e) {
+		
+        return QualifiedName.create(e.getName());
+    }
+}

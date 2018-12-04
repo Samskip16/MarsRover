@@ -1,0 +1,68 @@
+grammar mars.ru.des.robot.TaskDSL with org.eclipse.xtext.common.Terminals
+
+generate taskDSL "http://www.ru.mars/des/robot/TaskDSL"
+
+Task: 'Task:' name = ID
+	action = Action
+	detector = Detectors
+;
+	
+
+Action: 'action:'
+	DriveUntil | Investigate | Speak | FollowLine
+;
+
+Detectors: 'detectors:'
+	Avoid
+;
+
+DriveUntil: 'Drive' 
+	(speed = Speed)?
+	'Until'
+	object = Object
+	'Found'
+;
+
+Investigate: 'Investigate'
+	speed = Speed
+;
+
+Speak: 'Speak'
+	text = STRING
+;
+
+FollowLine: 'FollowLine' 'for'
+	distance = INT 'meters'
+;
+
+Avoid: 'Avoid' 
+	(color = Color)?
+	object = Object
+	'By'
+	avoidAction += AvoidAction+
+	
+;
+
+AvoidAction:
+	(MoveBack | Turn) 'and'?
+;
+
+MoveBack: 'MoveBackwards'
+	distance = INT 'meters'
+;
+
+Turn: 'Turn'
+	degrees = INT 'degrees'
+;
+
+enum Object:
+	ROCK | LAKE
+;
+
+enum Speed:
+	FAST | NORMAL | SLOW
+;
+
+enum Color:
+	RED | GREEN | BLUE
+;
