@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: mars.ru.des.robot.tasks
+Bundle-ManifestVersion: 2
+Bundle-Name: mars.ru.des.robot.tasks
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: mars.ru.des.robot.tasks; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.eclipse.xtend.lib;bundle-version="2.14.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: mars.ru.des.robot.scoping,
+ mars.ru.des.robot.generator,
+ mars.ru.des.robot.services,
+ mars.ru.des.robot.taskDSL,
+ mars.ru.des.robot.taskDSL.impl,
+ mars.ru.des.robot.parser.antlr.internal,
+ mars.ru.des.robot,
+ mars.ru.des.robot.parser.antlr,
+ mars.ru.des.robot.taskDSL.util,
+ mars.ru.des.robot.serializer,
+ mars.ru.des.robot.validation
+Import-Package: org.apache.log4j
