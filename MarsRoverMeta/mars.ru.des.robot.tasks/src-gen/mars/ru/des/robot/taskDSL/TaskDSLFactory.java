@@ -24,15 +24,6 @@ public interface TaskDSLFactory extends EFactory
   TaskDSLFactory eINSTANCE = mars.ru.des.robot.taskDSL.impl.TaskDSLFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Task</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Task</em>'.
-   * @generated
-   */
-  Task createTask();
-
-  /**
    * Returns a new object of class '<em>Mission</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -40,6 +31,15 @@ public interface TaskDSLFactory extends EFactory
    * @generated
    */
   Mission createMission();
+
+  /**
+   * Returns a new object of class '<em>Task</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Task</em>'.
+   * @generated
+   */
+  Task createTask();
 
   /**
    * Returns a new object of class '<em>Action</em>'.
@@ -51,13 +51,13 @@ public interface TaskDSLFactory extends EFactory
   Action createAction();
 
   /**
-   * Returns a new object of class '<em>Detectors</em>'.
+   * Returns a new object of class '<em>Detector</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Detectors</em>'.
+   * @return a new object of class '<em>Detector</em>'.
    * @generated
    */
-  Detectors createDetectors();
+  Detector createDetector();
 
   /**
    * Returns a new object of class '<em>Drive Until</em>'.
@@ -105,13 +105,13 @@ public interface TaskDSLFactory extends EFactory
   Avoid createAvoid();
 
   /**
-   * Returns a new object of class '<em>Avoid Action</em>'.
+   * Returns a new object of class '<em>Drive Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Avoid Action</em>'.
+   * @return a new object of class '<em>Drive Action</em>'.
    * @generated
    */
-  AvoidAction createAvoidAction();
+  DriveAction createDriveAction();
 
   /**
    * Returns a new object of class '<em>Move Back</em>'.

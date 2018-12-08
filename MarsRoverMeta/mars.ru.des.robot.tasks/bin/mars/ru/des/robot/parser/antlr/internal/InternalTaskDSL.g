@@ -44,7 +44,7 @@ import mars.ru.des.robot.services.TaskDSLGrammarAccess;
 
     @Override
     protected String getFirstRuleName() {
-    	return "Task";
+    	return "Mission";
    	}
 
    	@Override
@@ -61,15 +61,15 @@ import mars.ru.des.robot.services.TaskDSLGrammarAccess;
     }
 }
 
-// Entry rule entryRuleTask
-entryRuleTask returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getTaskRule()); }
-	iv_ruleTask=ruleTask
-	{ $current=$iv_ruleTask.current; }
+// Entry rule entryRuleMission
+entryRuleMission returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMissionRule()); }
+	iv_ruleMission=ruleMission
+	{ $current=$iv_ruleMission.current; }
 	EOF;
 
-// Rule Task
-ruleTask returns [EObject current=null]
+// Rule Mission
+ruleMission returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -77,19 +77,19 @@ ruleTask returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='Task:'
+		otherlv_0='Mission:'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getTaskAccess().getTaskKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getMissionAccess().getMissionKeyword_0());
 		}
 		(
 			(
 				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getTaskAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getMissionAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getTaskRule());
+						$current = createModelElement(grammarAccess.getMissionRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -99,44 +99,23 @@ ruleTask returns [EObject current=null]
 				}
 			)
 		)
+		otherlv_2='tasks:'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getMissionAccess().getTasksKeyword_2());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTaskAccess().getActionActionParserRuleCall_2_0());
-				}
-				lv_action_2_0=ruleAction
-				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getTaskRule());
+						$current = createModelElement(grammarAccess.getMissionRule());
 					}
-					set(
-						$current,
-						"action",
-						lv_action_2_0,
-						"mars.ru.des.robot.TaskDSL.Action");
-					afterParserOrEnumRuleCall();
+				}
+				otherlv_3=RULE_ID
+				{
+					newLeafNode(otherlv_3, grammarAccess.getMissionAccess().getTasksTaskCrossReference_3_0());
 				}
 			)
 		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getTaskAccess().getDetectorDetectorsParserRuleCall_3_0());
-				}
-				lv_detector_3_0=ruleDetectors
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getTaskRule());
-					}
-					set(
-						$current,
-						"detector",
-						lv_detector_3_0,
-						"mars.ru.des.robot.TaskDSL.Detectors");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)?
 	)
 ;
 
@@ -200,15 +179,15 @@ ruleAction returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleDetectors
-entryRuleDetectors returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDetectorsRule()); }
-	iv_ruleDetectors=ruleDetectors
-	{ $current=$iv_ruleDetectors.current; }
+// Entry rule entryRuleDetector
+entryRuleDetector returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDetectorRule()); }
+	iv_ruleDetector=ruleDetector
+	{ $current=$iv_ruleDetector.current; }
 	EOF;
 
-// Rule Detectors
-ruleDetectors returns [EObject current=null]
+// Rule Detector
+ruleDetector returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -218,22 +197,22 @@ ruleDetectors returns [EObject current=null]
 	(
 		otherlv_0='detectors:'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getDetectorsAccess().getDetectorsKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getDetectorAccess().getDetectorsKeyword_0());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDetectorsAccess().getAvoidsAvoidParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDetectorAccess().getAvoidersAvoidParserRuleCall_1_0());
 				}
-				lv_avoids_1_0=ruleAvoid
+				lv_avoiders_1_0=ruleAvoid
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDetectorsRule());
+						$current = createModelElementForParent(grammarAccess.getDetectorRule());
 					}
 					add(
 						$current,
-						"avoids",
-						lv_avoids_1_0,
+						"avoiders",
+						lv_avoiders_1_0,
 						"mars.ru.des.robot.TaskDSL.Avoid");
 					afterParserOrEnumRuleCall();
 				}
@@ -523,9 +502,9 @@ ruleAvoid returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAvoidAccess().getAvoidActionsAvoidActionParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getAvoidAccess().getAvoidActionsDriveActionParserRuleCall_4_0());
 				}
-				lv_avoidActions_4_0=ruleAvoidAction
+				lv_avoidActions_4_0=ruleDriveAction
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getAvoidRule());
@@ -534,7 +513,7 @@ ruleAvoid returns [EObject current=null]
 						$current,
 						"avoidActions",
 						lv_avoidActions_4_0,
-						"mars.ru.des.robot.TaskDSL.AvoidAction");
+						"mars.ru.des.robot.TaskDSL.DriveAction");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -542,15 +521,15 @@ ruleAvoid returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleAvoidAction
-entryRuleAvoidAction returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getAvoidActionRule()); }
-	iv_ruleAvoidAction=ruleAvoidAction
-	{ $current=$iv_ruleAvoidAction.current; }
+// Entry rule entryRuleDriveAction
+entryRuleDriveAction returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDriveActionRule()); }
+	iv_ruleDriveAction=ruleDriveAction
+	{ $current=$iv_ruleDriveAction.current; }
 	EOF;
 
-// Rule AvoidAction
-ruleAvoidAction returns [EObject current=null]
+// Rule DriveAction
+ruleDriveAction returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -560,7 +539,7 @@ ruleAvoidAction returns [EObject current=null]
 	(
 		(
 			{
-				newCompositeNode(grammarAccess.getAvoidActionAccess().getMoveBackParserRuleCall_0_0());
+				newCompositeNode(grammarAccess.getDriveActionAccess().getMoveBackParserRuleCall_0_0());
 			}
 			this_MoveBack_0=ruleMoveBack
 			{
@@ -569,7 +548,7 @@ ruleAvoidAction returns [EObject current=null]
 			}
 			    |
 			{
-				newCompositeNode(grammarAccess.getAvoidActionAccess().getTurnParserRuleCall_0_1());
+				newCompositeNode(grammarAccess.getDriveActionAccess().getTurnParserRuleCall_0_1());
 			}
 			this_Turn_1=ruleTurn
 			{
@@ -580,7 +559,7 @@ ruleAvoidAction returns [EObject current=null]
 		(
 			otherlv_2='and'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getAvoidActionAccess().getAndKeyword_1());
+				newLeafNode(otherlv_2, grammarAccess.getDriveActionAccess().getAndKeyword_1());
 			}
 		)?
 	)
@@ -608,9 +587,9 @@ ruleMoveBack returns [EObject current=null]
 		}
 		(
 			(
-				lv_distance_1_0=RULE_INT
+				lv_meters_1_0=RULE_INT
 				{
-					newLeafNode(lv_distance_1_0, grammarAccess.getMoveBackAccess().getDistanceINTTerminalRuleCall_1_0());
+					newLeafNode(lv_meters_1_0, grammarAccess.getMoveBackAccess().getMetersINTTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -618,8 +597,8 @@ ruleMoveBack returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"distance",
-						lv_distance_1_0,
+						"meters",
+						lv_meters_1_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)

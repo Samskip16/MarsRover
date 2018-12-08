@@ -6,8 +6,8 @@ package mars.ru.des.robot.taskDSL.impl;
 import java.util.Collection;
 
 import mars.ru.des.robot.taskDSL.Avoid;
-import mars.ru.des.robot.taskDSL.AvoidAction;
 import mars.ru.des.robot.taskDSL.Color;
+import mars.ru.des.robot.taskDSL.DriveAction;
 import mars.ru.des.robot.taskDSL.TaskDSLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -89,7 +89,7 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
    * @generated
    * @ordered
    */
-  protected EList<AvoidAction> avoidActions;
+  protected EList<DriveAction> avoidActions;
 
   /**
    * <!-- begin-user-doc -->
@@ -163,11 +163,11 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AvoidAction> getAvoidActions()
+  public EList<DriveAction> getAvoidActions()
   {
     if (avoidActions == null)
     {
-      avoidActions = new EObjectContainmentEList<AvoidAction>(AvoidAction.class, this, TaskDSLPackage.AVOID__AVOID_ACTIONS);
+      avoidActions = new EObjectContainmentEList<DriveAction>(DriveAction.class, this, TaskDSLPackage.AVOID__AVOID_ACTIONS);
     }
     return avoidActions;
   }
@@ -227,7 +227,7 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
         return;
       case TaskDSLPackage.AVOID__AVOID_ACTIONS:
         getAvoidActions().clear();
-        getAvoidActions().addAll((Collection<? extends AvoidAction>)newValue);
+        getAvoidActions().addAll((Collection<? extends DriveAction>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

@@ -13,39 +13,39 @@ package mars.ru.des.robot.taskDSL;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link mars.ru.des.robot.taskDSL.MoveBack#getDistance <em>Distance</em>}</li>
+ *   <li>{@link mars.ru.des.robot.taskDSL.MoveBack#getMeters <em>Meters</em>}</li>
  * </ul>
  *
  * @see mars.ru.des.robot.taskDSL.TaskDSLPackage#getMoveBack()
  * @model
  * @generated
  */
-public interface MoveBack extends AvoidAction
+public interface MoveBack extends DriveAction
 {
   /**
-   * Returns the value of the '<em><b>Distance</b></em>' attribute.
+   * Returns the value of the '<em><b>Meters</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Distance</em>' attribute isn't clear,
+   * If the meaning of the '<em>Meters</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Distance</em>' attribute.
-   * @see #setDistance(int)
-   * @see mars.ru.des.robot.taskDSL.TaskDSLPackage#getMoveBack_Distance()
+   * @return the value of the '<em>Meters</em>' attribute.
+   * @see #setMeters(int)
+   * @see mars.ru.des.robot.taskDSL.TaskDSLPackage#getMoveBack_Meters()
    * @model
    * @generated
    */
-  int getDistance();
+  int getMeters();
 
   /**
-   * Sets the value of the '{@link mars.ru.des.robot.taskDSL.MoveBack#getDistance <em>Distance</em>}' attribute.
+   * Sets the value of the '{@link mars.ru.des.robot.taskDSL.MoveBack#getMeters <em>Meters</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Distance</em>' attribute.
-   * @see #getDistance()
+   * @param value the new value of the '<em>Meters</em>' attribute.
+   * @see #getMeters()
    * @generated
    */
-  void setDistance(int value);
+  void setMeters(int value);
 
 } // MoveBack

@@ -1,0 +1,9 @@
+package mars.ru.des.robot.generator;
+
+public class Brick1Generator {
+
+	def generate(Task task) {
+		
+	}
+	
+}

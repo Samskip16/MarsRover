@@ -32,28 +32,28 @@ public class TaskDSLParser extends AbstractContentAssistParser {
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, TaskDSLGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getActionAccess().getAlternatives(), "rule__Action__Alternatives");
-			builder.put(grammarAccess.getAvoidActionAccess().getAlternatives_0(), "rule__AvoidAction__Alternatives_0");
+			builder.put(grammarAccess.getDriveActionAccess().getAlternatives_0(), "rule__DriveAction__Alternatives_0");
 			builder.put(grammarAccess.getObjectAccess().getAlternatives(), "rule__Object__Alternatives");
 			builder.put(grammarAccess.getSpeedAccess().getAlternatives(), "rule__Speed__Alternatives");
 			builder.put(grammarAccess.getColorAccess().getAlternatives(), "rule__Color__Alternatives");
-			builder.put(grammarAccess.getTaskAccess().getGroup(), "rule__Task__Group__0");
 			builder.put(grammarAccess.getMissionAccess().getGroup(), "rule__Mission__Group__0");
+			builder.put(grammarAccess.getTaskAccess().getGroup(), "rule__Task__Group__0");
 			builder.put(grammarAccess.getActionAccess().getGroup_0(), "rule__Action__Group_0__0");
-			builder.put(grammarAccess.getDetectorsAccess().getGroup(), "rule__Detectors__Group__0");
+			builder.put(grammarAccess.getDetectorAccess().getGroup(), "rule__Detector__Group__0");
 			builder.put(grammarAccess.getDriveUntilAccess().getGroup(), "rule__DriveUntil__Group__0");
 			builder.put(grammarAccess.getInvestigateAccess().getGroup(), "rule__Investigate__Group__0");
 			builder.put(grammarAccess.getSpeakAccess().getGroup(), "rule__Speak__Group__0");
 			builder.put(grammarAccess.getFollowLineAccess().getGroup(), "rule__FollowLine__Group__0");
 			builder.put(grammarAccess.getAvoidAccess().getGroup(), "rule__Avoid__Group__0");
-			builder.put(grammarAccess.getAvoidActionAccess().getGroup(), "rule__AvoidAction__Group__0");
+			builder.put(grammarAccess.getDriveActionAccess().getGroup(), "rule__DriveAction__Group__0");
 			builder.put(grammarAccess.getMoveBackAccess().getGroup(), "rule__MoveBack__Group__0");
 			builder.put(grammarAccess.getTurnAccess().getGroup(), "rule__Turn__Group__0");
+			builder.put(grammarAccess.getMissionAccess().getNameAssignment_1(), "rule__Mission__NameAssignment_1");
+			builder.put(grammarAccess.getMissionAccess().getTasksAssignment_3(), "rule__Mission__TasksAssignment_3");
 			builder.put(grammarAccess.getTaskAccess().getNameAssignment_1(), "rule__Task__NameAssignment_1");
 			builder.put(grammarAccess.getTaskAccess().getActionAssignment_2(), "rule__Task__ActionAssignment_2");
 			builder.put(grammarAccess.getTaskAccess().getDetectorAssignment_3(), "rule__Task__DetectorAssignment_3");
-			builder.put(grammarAccess.getMissionAccess().getNameAssignment_1(), "rule__Mission__NameAssignment_1");
-			builder.put(grammarAccess.getMissionAccess().getTasksAssignment_3(), "rule__Mission__TasksAssignment_3");
-			builder.put(grammarAccess.getDetectorsAccess().getAvoidsAssignment_1(), "rule__Detectors__AvoidsAssignment_1");
+			builder.put(grammarAccess.getDetectorAccess().getAvoidersAssignment_1(), "rule__Detector__AvoidersAssignment_1");
 			builder.put(grammarAccess.getDriveUntilAccess().getSpeedAssignment_1(), "rule__DriveUntil__SpeedAssignment_1");
 			builder.put(grammarAccess.getDriveUntilAccess().getColorAssignment_3(), "rule__DriveUntil__ColorAssignment_3");
 			builder.put(grammarAccess.getDriveUntilAccess().getObjectAssignment_4(), "rule__DriveUntil__ObjectAssignment_4");
@@ -63,7 +63,7 @@ public class TaskDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAvoidAccess().getColorAssignment_1(), "rule__Avoid__ColorAssignment_1");
 			builder.put(grammarAccess.getAvoidAccess().getObjectAssignment_2(), "rule__Avoid__ObjectAssignment_2");
 			builder.put(grammarAccess.getAvoidAccess().getAvoidActionsAssignment_4(), "rule__Avoid__AvoidActionsAssignment_4");
-			builder.put(grammarAccess.getMoveBackAccess().getDistanceAssignment_1(), "rule__MoveBack__DistanceAssignment_1");
+			builder.put(grammarAccess.getMoveBackAccess().getMetersAssignment_1(), "rule__MoveBack__MetersAssignment_1");
 			builder.put(grammarAccess.getTurnAccess().getDegreesAssignment_1(), "rule__Turn__DegreesAssignment_1");
 		}
 	}

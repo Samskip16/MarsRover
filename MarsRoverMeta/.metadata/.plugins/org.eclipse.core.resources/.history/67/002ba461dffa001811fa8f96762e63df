@@ -1,0 +1,15 @@
+package mars.ru.des.robot.generator
+
+import mars.ru.des.robot.taskDSL.Color
+
+class DslHelper {
+
+	def static String colorToString(Color color) {
+		if (color === null) {
+			return "[Color.RED, Color.GREEN, Color.BLUE]"
+		} else {
+			return "Color." + color.toString()
+		}
+	}
+
+}

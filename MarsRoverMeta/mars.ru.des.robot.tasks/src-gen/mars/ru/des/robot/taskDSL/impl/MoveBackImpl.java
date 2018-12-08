@@ -20,32 +20,32 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link mars.ru.des.robot.taskDSL.impl.MoveBackImpl#getDistance <em>Distance</em>}</li>
+ *   <li>{@link mars.ru.des.robot.taskDSL.impl.MoveBackImpl#getMeters <em>Meters</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MoveBackImpl extends AvoidActionImpl implements MoveBack
+public class MoveBackImpl extends DriveActionImpl implements MoveBack
 {
   /**
-   * The default value of the '{@link #getDistance() <em>Distance</em>}' attribute.
+   * The default value of the '{@link #getMeters() <em>Meters</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDistance()
+   * @see #getMeters()
    * @generated
    * @ordered
    */
-  protected static final int DISTANCE_EDEFAULT = 0;
+  protected static final int METERS_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getDistance() <em>Distance</em>}' attribute.
+   * The cached value of the '{@link #getMeters() <em>Meters</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDistance()
+   * @see #getMeters()
    * @generated
    * @ordered
    */
-  protected int distance = DISTANCE_EDEFAULT;
+  protected int meters = METERS_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +73,9 @@ public class MoveBackImpl extends AvoidActionImpl implements MoveBack
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getDistance()
+  public int getMeters()
   {
-    return distance;
+    return meters;
   }
 
   /**
@@ -83,12 +83,12 @@ public class MoveBackImpl extends AvoidActionImpl implements MoveBack
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDistance(int newDistance)
+  public void setMeters(int newMeters)
   {
-    int oldDistance = distance;
-    distance = newDistance;
+    int oldMeters = meters;
+    meters = newMeters;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TaskDSLPackage.MOVE_BACK__DISTANCE, oldDistance, distance));
+      eNotify(new ENotificationImpl(this, Notification.SET, TaskDSLPackage.MOVE_BACK__METERS, oldMeters, meters));
   }
 
   /**
@@ -101,8 +101,8 @@ public class MoveBackImpl extends AvoidActionImpl implements MoveBack
   {
     switch (featureID)
     {
-      case TaskDSLPackage.MOVE_BACK__DISTANCE:
-        return getDistance();
+      case TaskDSLPackage.MOVE_BACK__METERS:
+        return getMeters();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +117,8 @@ public class MoveBackImpl extends AvoidActionImpl implements MoveBack
   {
     switch (featureID)
     {
-      case TaskDSLPackage.MOVE_BACK__DISTANCE:
-        setDistance((Integer)newValue);
+      case TaskDSLPackage.MOVE_BACK__METERS:
+        setMeters((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +134,8 @@ public class MoveBackImpl extends AvoidActionImpl implements MoveBack
   {
     switch (featureID)
     {
-      case TaskDSLPackage.MOVE_BACK__DISTANCE:
-        setDistance(DISTANCE_EDEFAULT);
+      case TaskDSLPackage.MOVE_BACK__METERS:
+        setMeters(METERS_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +151,8 @@ public class MoveBackImpl extends AvoidActionImpl implements MoveBack
   {
     switch (featureID)
     {
-      case TaskDSLPackage.MOVE_BACK__DISTANCE:
-        return distance != DISTANCE_EDEFAULT;
+      case TaskDSLPackage.MOVE_BACK__METERS:
+        return meters != METERS_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +168,8 @@ public class MoveBackImpl extends AvoidActionImpl implements MoveBack
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (distance: ");
-    result.append(distance);
+    result.append(" (meters: ");
+    result.append(meters);
     result.append(')');
     return result.toString();
   }

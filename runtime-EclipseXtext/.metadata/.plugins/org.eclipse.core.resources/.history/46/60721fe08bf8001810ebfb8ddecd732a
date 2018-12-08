@@ -1,0 +1,14 @@
+class ColorAvoider(Action):
+    
+    def __init__(self, colors, driveActions):
+        self.colors = colors
+        self.driveActions = driveActions;
+        
+        self.cs = ColorSensor()
+    
+    def triggered(self):
+        return self.cs.color in self.colors
+    
+    def execute(self):
+        for a in self.driveActions:
+            a.drive()

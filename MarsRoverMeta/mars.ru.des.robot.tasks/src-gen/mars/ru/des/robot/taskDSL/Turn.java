@@ -20,7 +20,7 @@ package mars.ru.des.robot.taskDSL;
  * @model
  * @generated
  */
-public interface Turn extends AvoidAction
+public interface Turn extends DriveAction
 {
   /**
    * Returns the value of the '<em><b>Degrees</b></em>' attribute.

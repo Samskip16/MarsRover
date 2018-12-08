@@ -1,0 +1,13 @@
+class DriveData:
+    
+    def __init__(self, meters, degrees):
+        self.meters = meters
+        self.degrees = degrees
+        
+        self.driver = Driver()
+        
+    def drive(self):
+        if meters is 0:
+            self.driver.rotate_degrees(self.degrees)
+        else:
+            self.driver.drive(meters)

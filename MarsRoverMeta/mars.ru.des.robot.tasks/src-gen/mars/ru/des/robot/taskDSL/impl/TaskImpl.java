@@ -4,7 +4,7 @@
 package mars.ru.des.robot.taskDSL.impl;
 
 import mars.ru.des.robot.taskDSL.Action;
-import mars.ru.des.robot.taskDSL.Detectors;
+import mars.ru.des.robot.taskDSL.Detector;
 import mars.ru.des.robot.taskDSL.Task;
 import mars.ru.des.robot.taskDSL.TaskDSLPackage;
 
@@ -72,7 +72,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task
    * @generated
    * @ordered
    */
-  protected Detectors detector;
+  protected Detector detector;
 
   /**
    * <!-- begin-user-doc -->
@@ -171,7 +171,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task
    * <!-- end-user-doc -->
    * @generated
    */
-  public Detectors getDetector()
+  public Detector getDetector()
   {
     return detector;
   }
@@ -181,9 +181,9 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetDetector(Detectors newDetector, NotificationChain msgs)
+  public NotificationChain basicSetDetector(Detector newDetector, NotificationChain msgs)
   {
-    Detectors oldDetector = detector;
+    Detector oldDetector = detector;
     detector = newDetector;
     if (eNotificationRequired())
     {
@@ -198,7 +198,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDetector(Detectors newDetector)
+  public void setDetector(Detector newDetector)
   {
     if (newDetector != detector)
     {
@@ -269,7 +269,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task
         setAction((Action)newValue);
         return;
       case TaskDSLPackage.TASK__DETECTOR:
-        setDetector((Detectors)newValue);
+        setDetector((Detector)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -292,7 +292,7 @@ public class TaskImpl extends MinimalEObjectImpl.Container implements Task
         setAction((Action)null);
         return;
       case TaskDSLPackage.TASK__DETECTOR:
-        setDetector((Detectors)null);
+        setDetector((Detector)null);
         return;
     }
     super.eUnset(featureID);

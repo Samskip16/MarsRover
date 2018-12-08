@@ -1,0 +1,52 @@
+package mars.ru.des.robot.generator
+
+import mars.ru.des.robot.taskDSL.DriveUntil
+import mars.ru.des.robot.taskDSL.Investigate
+import mars.ru.des.robot.taskDSL.Object
+import mars.ru.des.robot.taskDSL.Speak
+import mars.ru.des.robot.taskDSL.Task
+
+class Brick1Generator {
+
+	def static generate(Task task) '''
+		#!/usr/bin/env python3
+		
+		
+		def run():
+		    for t in tasks:
+		        t.execute()
+		
+		
+		print("Starting brick 1")
+		tasks = []
+		
+		
+		run()
+	'''
+
+	def generateTask(Task task) '''
+		Task t1 = Task()
+		t1.set_action(«generateAction(task.getAction)»)
+		
+		«FOR av : task.avoiders BEFORE "tasks = [" SEPARATOR "," AFTER "]"»
+			t1.add_avoiders(«generateAction(t.getAction)»)
+		«ENDFOR»
+	'''
+
+	def dispatch static generateAction(DriveUntil action) '''
+		«IF action.getObject() === Object.LAKE»
+			ColorFinder(«DslHelper.toString(action.getColor())», «DslHelper.toString(action.getSpeed())»)
+		«ELSEIF action.getObject() === Object.ROCK»
+			RockFinder(«DslHelper.toString(action.getColor())», «DslHelper.toString(action.getSpeed())»)
+		«ENDIF»
+	'''
+
+	def dispatch static generateAction(Investigate action) '''
+		Investigator(«DslHelper.toString(action.getSpeed())»)
+	'''
+
+	def dispatch static generateAction(Speak action) '''
+		Speaker("«action.getText()»")
+	'''
+
+}

@@ -7,7 +7,7 @@ import com.google.inject.Inject;
 import java.util.Set;
 import mars.ru.des.robot.services.TaskDSLGrammarAccess;
 import mars.ru.des.robot.taskDSL.Avoid;
-import mars.ru.des.robot.taskDSL.Detectors;
+import mars.ru.des.robot.taskDSL.Detector;
 import mars.ru.des.robot.taskDSL.DriveUntil;
 import mars.ru.des.robot.taskDSL.FollowLine;
 import mars.ru.des.robot.taskDSL.Investigate;
@@ -44,8 +44,8 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case TaskDSLPackage.AVOID:
 				sequence_Avoid(context, (Avoid) semanticObject); 
 				return; 
-			case TaskDSLPackage.DETECTORS:
-				sequence_Detectors(context, (Detectors) semanticObject); 
+			case TaskDSLPackage.DETECTOR:
+				sequence_Detector(context, (Detector) semanticObject); 
 				return; 
 			case TaskDSLPackage.DRIVE_UNTIL:
 				sequence_DriveUntil(context, (DriveUntil) semanticObject); 
@@ -81,7 +81,7 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Avoid returns Avoid
 	 *
 	 * Constraint:
-	 *     (color=Color? object=Object avoidActions+=AvoidAction+)
+	 *     (color=Color? object=Object avoidActions+=DriveAction+)
 	 */
 	protected void sequence_Avoid(ISerializationContext context, Avoid semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -90,12 +90,12 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
-	 *     Detectors returns Detectors
+	 *     Detector returns Detector
 	 *
 	 * Constraint:
-	 *     avoids+=Avoid+
+	 *     avoiders+=Avoid+
 	 */
-	protected void sequence_Detectors(ISerializationContext context, Detectors semanticObject) {
+	protected void sequence_Detector(ISerializationContext context, Detector semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -174,19 +174,19 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
-	 *     AvoidAction returns MoveBack
+	 *     DriveAction returns MoveBack
 	 *     MoveBack returns MoveBack
 	 *
 	 * Constraint:
-	 *     distance=INT
+	 *     meters=INT
 	 */
 	protected void sequence_MoveBack(ISerializationContext context, MoveBack semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TaskDSLPackage.Literals.MOVE_BACK__DISTANCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TaskDSLPackage.Literals.MOVE_BACK__DISTANCE));
+			if (transientValues.isValueTransient(semanticObject, TaskDSLPackage.Literals.MOVE_BACK__METERS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TaskDSLPackage.Literals.MOVE_BACK__METERS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMoveBackAccess().getDistanceINTTerminalRuleCall_1_0(), semanticObject.getDistance());
+		feeder.accept(grammarAccess.getMoveBackAccess().getMetersINTTerminalRuleCall_1_0(), semanticObject.getMeters());
 		feeder.finish();
 	}
 	
@@ -215,7 +215,7 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Task returns Task
 	 *
 	 * Constraint:
-	 *     (name=ID action=Action detector=Detectors?)
+	 *     (name=ID action=Action detector=Detector?)
 	 */
 	protected void sequence_Task(ISerializationContext context, Task semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -224,7 +224,7 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
-	 *     AvoidAction returns Turn
+	 *     DriveAction returns Turn
 	 *     Turn returns Turn
 	 *
 	 * Constraint:

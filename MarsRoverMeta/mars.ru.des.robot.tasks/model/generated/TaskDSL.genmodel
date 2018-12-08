@@ -20,18 +20,18 @@
       <genEnumLiterals ecoreEnumLiteral="TaskDSL.ecore#//Color/GREEN"/>
       <genEnumLiterals ecoreEnumLiteral="TaskDSL.ecore#//Color/BLUE"/>
     </genEnums>
+    <genClasses ecoreClass="TaskDSL.ecore#//Mission">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//Mission/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Mission/tasks"/>
+    </genClasses>
     <genClasses ecoreClass="TaskDSL.ecore#//Task">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//Task/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Task/action"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Task/detector"/>
     </genClasses>
-    <genClasses ecoreClass="TaskDSL.ecore#//Mission">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//Mission/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Mission/tasks"/>
-    </genClasses>
     <genClasses ecoreClass="TaskDSL.ecore#//Action"/>
-    <genClasses ecoreClass="TaskDSL.ecore#//Detectors">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Detectors/avoids"/>
+    <genClasses ecoreClass="TaskDSL.ecore#//Detector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Detector/avoiders"/>
     </genClasses>
     <genClasses ecoreClass="TaskDSL.ecore#//DriveUntil">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//DriveUntil/speed"/>
@@ -52,9 +52,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//Avoid/object"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Avoid/avoidActions"/>
     </genClasses>
-    <genClasses ecoreClass="TaskDSL.ecore#//AvoidAction"/>
+    <genClasses ecoreClass="TaskDSL.ecore#//DriveAction"/>
     <genClasses ecoreClass="TaskDSL.ecore#//MoveBack">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//MoveBack/distance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//MoveBack/meters"/>
     </genClasses>
     <genClasses ecoreClass="TaskDSL.ecore#//Turn">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//Turn/degrees"/>

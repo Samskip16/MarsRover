@@ -26,47 +26,6 @@ import org.eclipse.xtext.service.GrammarProvider;
 @Singleton
 public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 	
-	public class TaskElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.Task");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cTaskKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cActionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cActionActionParserRuleCall_2_0 = (RuleCall)cActionAssignment_2.eContents().get(0);
-		private final Assignment cDetectorAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDetectorDetectorsParserRuleCall_3_0 = (RuleCall)cDetectorAssignment_3.eContents().get(0);
-		
-		//Task:
-		//	'Task:' name=ID
-		//	action=Action
-		//	detector=Detectors?;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'Task:' name=ID action=Action detector=Detectors?
-		public Group getGroup() { return cGroup; }
-		
-		//'Task:'
-		public Keyword getTaskKeyword_0() { return cTaskKeyword_0; }
-		
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-		
-		//action=Action
-		public Assignment getActionAssignment_2() { return cActionAssignment_2; }
-		
-		//Action
-		public RuleCall getActionActionParserRuleCall_2_0() { return cActionActionParserRuleCall_2_0; }
-		
-		//detector=Detectors?
-		public Assignment getDetectorAssignment_3() { return cDetectorAssignment_3; }
-		
-		//Detectors
-		public RuleCall getDetectorDetectorsParserRuleCall_3_0() { return cDetectorDetectorsParserRuleCall_3_0; }
-	}
 	public class MissionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.Mission");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -80,7 +39,8 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Mission:
 		//	'Mission:' name=ID
-		//	"tasks:" tasks=[Task];
+		//	"tasks:"
+		//	tasks=[Task];
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Mission:' name=ID "tasks:" tasks=[Task]
@@ -106,6 +66,47 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ID
 		public RuleCall getTasksTaskIDTerminalRuleCall_3_0_1() { return cTasksTaskIDTerminalRuleCall_3_0_1; }
+	}
+	public class TaskElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.Task");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTaskKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cActionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cActionActionParserRuleCall_2_0 = (RuleCall)cActionAssignment_2.eContents().get(0);
+		private final Assignment cDetectorAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDetectorDetectorParserRuleCall_3_0 = (RuleCall)cDetectorAssignment_3.eContents().get(0);
+		
+		//Task:
+		//	'Task:' name=ID
+		//	action=Action
+		//	detector=Detector?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Task:' name=ID action=Action detector=Detector?
+		public Group getGroup() { return cGroup; }
+		
+		//'Task:'
+		public Keyword getTaskKeyword_0() { return cTaskKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//action=Action
+		public Assignment getActionAssignment_2() { return cActionAssignment_2; }
+		
+		//Action
+		public RuleCall getActionActionParserRuleCall_2_0() { return cActionActionParserRuleCall_2_0; }
+		
+		//detector=Detector?
+		public Assignment getDetectorAssignment_3() { return cDetectorAssignment_3; }
+		
+		//Detector
+		public RuleCall getDetectorDetectorParserRuleCall_3_0() { return cDetectorDetectorParserRuleCall_3_0; }
 	}
 	public class ActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.Action");
@@ -143,29 +144,29 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//FollowLine
 		public RuleCall getFollowLineParserRuleCall_3() { return cFollowLineParserRuleCall_3; }
 	}
-	public class DetectorsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.Detectors");
+	public class DetectorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.Detector");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDetectorsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cAvoidsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cAvoidsAvoidParserRuleCall_1_0 = (RuleCall)cAvoidsAssignment_1.eContents().get(0);
+		private final Assignment cAvoidersAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cAvoidersAvoidParserRuleCall_1_0 = (RuleCall)cAvoidersAssignment_1.eContents().get(0);
 		
-		//Detectors:
+		//Detector:
 		//	'detectors:'
-		//	avoids+=Avoid+;
+		//	avoiders+=Avoid+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'detectors:' avoids+=Avoid+
+		//'detectors:' avoiders+=Avoid+
 		public Group getGroup() { return cGroup; }
 		
 		//'detectors:'
 		public Keyword getDetectorsKeyword_0() { return cDetectorsKeyword_0; }
 		
-		//avoids+=Avoid+
-		public Assignment getAvoidsAssignment_1() { return cAvoidsAssignment_1; }
+		//avoiders+=Avoid+
+		public Assignment getAvoidersAssignment_1() { return cAvoidersAssignment_1; }
 		
 		//Avoid
-		public RuleCall getAvoidsAvoidParserRuleCall_1_0() { return cAvoidsAvoidParserRuleCall_1_0; }
+		public RuleCall getAvoidersAvoidParserRuleCall_1_0() { return cAvoidersAvoidParserRuleCall_1_0; }
 	}
 	public class DriveUntilElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.DriveUntil");
@@ -305,17 +306,17 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cObjectObjectEnumRuleCall_2_0 = (RuleCall)cObjectAssignment_2.eContents().get(0);
 		private final Keyword cByKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cAvoidActionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cAvoidActionsAvoidActionParserRuleCall_4_0 = (RuleCall)cAvoidActionsAssignment_4.eContents().get(0);
+		private final RuleCall cAvoidActionsDriveActionParserRuleCall_4_0 = (RuleCall)cAvoidActionsAssignment_4.eContents().get(0);
 		
 		//Avoid:
 		//	'Avoid'
 		//	color=Color?
 		//	object=Object
 		//	'By'
-		//	avoidActions+=AvoidAction+;
+		//	avoidActions+=DriveAction+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Avoid' color=Color? object=Object 'By' avoidActions+=AvoidAction+
+		//'Avoid' color=Color? object=Object 'By' avoidActions+=DriveAction+
 		public Group getGroup() { return cGroup; }
 		
 		//'Avoid'
@@ -336,21 +337,21 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 		//'By'
 		public Keyword getByKeyword_3() { return cByKeyword_3; }
 		
-		//avoidActions+=AvoidAction+
+		//avoidActions+=DriveAction+
 		public Assignment getAvoidActionsAssignment_4() { return cAvoidActionsAssignment_4; }
 		
-		//AvoidAction
-		public RuleCall getAvoidActionsAvoidActionParserRuleCall_4_0() { return cAvoidActionsAvoidActionParserRuleCall_4_0; }
+		//DriveAction
+		public RuleCall getAvoidActionsDriveActionParserRuleCall_4_0() { return cAvoidActionsDriveActionParserRuleCall_4_0; }
 	}
-	public class AvoidActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.AvoidAction");
+	public class DriveActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.DriveAction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final RuleCall cMoveBackParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
 		private final RuleCall cTurnParserRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
 		private final Keyword cAndKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
-		//AvoidAction:
+		//DriveAction:
 		//	(MoveBack | Turn) 'and'?;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -373,26 +374,26 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "mars.ru.des.robot.TaskDSL.MoveBack");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMoveBackwardsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cDistanceAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cDistanceINTTerminalRuleCall_1_0 = (RuleCall)cDistanceAssignment_1.eContents().get(0);
+		private final Assignment cMetersAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cMetersINTTerminalRuleCall_1_0 = (RuleCall)cMetersAssignment_1.eContents().get(0);
 		private final Keyword cMetersKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//MoveBack:
 		//	'MoveBackwards'
-		//	distance=INT 'meters';
+		//	meters=INT 'meters';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'MoveBackwards' distance=INT 'meters'
+		//'MoveBackwards' meters=INT 'meters'
 		public Group getGroup() { return cGroup; }
 		
 		//'MoveBackwards'
 		public Keyword getMoveBackwardsKeyword_0() { return cMoveBackwardsKeyword_0; }
 		
-		//distance=INT
-		public Assignment getDistanceAssignment_1() { return cDistanceAssignment_1; }
+		//meters=INT
+		public Assignment getMetersAssignment_1() { return cMetersAssignment_1; }
 		
 		//INT
-		public RuleCall getDistanceINTTerminalRuleCall_1_0() { return cDistanceINTTerminalRuleCall_1_0; }
+		public RuleCall getMetersINTTerminalRuleCall_1_0() { return cMetersINTTerminalRuleCall_1_0; }
 		
 		//'meters'
 		public Keyword getMetersKeyword_2() { return cMetersKeyword_2; }
@@ -524,16 +525,16 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getBLUEBLUEKeyword_2_0() { return cBLUEBLUEKeyword_2_0; }
 	}
 	
-	private final TaskElements pTask;
 	private final MissionElements pMission;
+	private final TaskElements pTask;
 	private final ActionElements pAction;
-	private final DetectorsElements pDetectors;
+	private final DetectorElements pDetector;
 	private final DriveUntilElements pDriveUntil;
 	private final InvestigateElements pInvestigate;
 	private final SpeakElements pSpeak;
 	private final FollowLineElements pFollowLine;
 	private final AvoidElements pAvoid;
-	private final AvoidActionElements pAvoidAction;
+	private final DriveActionElements pDriveAction;
 	private final MoveBackElements pMoveBack;
 	private final TurnElements pTurn;
 	private final ObjectElements eObject;
@@ -549,16 +550,16 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 			TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pTask = new TaskElements();
 		this.pMission = new MissionElements();
+		this.pTask = new TaskElements();
 		this.pAction = new ActionElements();
-		this.pDetectors = new DetectorsElements();
+		this.pDetector = new DetectorElements();
 		this.pDriveUntil = new DriveUntilElements();
 		this.pInvestigate = new InvestigateElements();
 		this.pSpeak = new SpeakElements();
 		this.pFollowLine = new FollowLineElements();
 		this.pAvoid = new AvoidElements();
-		this.pAvoidAction = new AvoidActionElements();
+		this.pDriveAction = new DriveActionElements();
 		this.pMoveBack = new MoveBackElements();
 		this.pTurn = new TurnElements();
 		this.eObject = new ObjectElements();
@@ -593,27 +594,28 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Task:
-	//	'Task:' name=ID
-	//	action=Action
-	//	detector=Detectors?;
-	public TaskElements getTaskAccess() {
-		return pTask;
-	}
-	
-	public ParserRule getTaskRule() {
-		return getTaskAccess().getRule();
-	}
-	
 	//Mission:
 	//	'Mission:' name=ID
-	//	"tasks:" tasks=[Task];
+	//	"tasks:"
+	//	tasks=[Task];
 	public MissionElements getMissionAccess() {
 		return pMission;
 	}
 	
 	public ParserRule getMissionRule() {
 		return getMissionAccess().getRule();
+	}
+	
+	//Task:
+	//	'Task:' name=ID
+	//	action=Action
+	//	detector=Detector?;
+	public TaskElements getTaskAccess() {
+		return pTask;
+	}
+	
+	public ParserRule getTaskRule() {
+		return getTaskAccess().getRule();
 	}
 	
 	//Action:
@@ -627,15 +629,15 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getActionAccess().getRule();
 	}
 	
-	//Detectors:
+	//Detector:
 	//	'detectors:'
-	//	avoids+=Avoid+;
-	public DetectorsElements getDetectorsAccess() {
-		return pDetectors;
+	//	avoiders+=Avoid+;
+	public DetectorElements getDetectorAccess() {
+		return pDetector;
 	}
 	
-	public ParserRule getDetectorsRule() {
-		return getDetectorsAccess().getRule();
+	public ParserRule getDetectorRule() {
+		return getDetectorAccess().getRule();
 	}
 	
 	//DriveUntil:
@@ -691,7 +693,7 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 	//	color=Color?
 	//	object=Object
 	//	'By'
-	//	avoidActions+=AvoidAction+;
+	//	avoidActions+=DriveAction+;
 	public AvoidElements getAvoidAccess() {
 		return pAvoid;
 	}
@@ -700,19 +702,19 @@ public class TaskDSLGrammarAccess extends AbstractGrammarElementFinder {
 		return getAvoidAccess().getRule();
 	}
 	
-	//AvoidAction:
+	//DriveAction:
 	//	(MoveBack | Turn) 'and'?;
-	public AvoidActionElements getAvoidActionAccess() {
-		return pAvoidAction;
+	public DriveActionElements getDriveActionAccess() {
+		return pDriveAction;
 	}
 	
-	public ParserRule getAvoidActionRule() {
-		return getAvoidActionAccess().getRule();
+	public ParserRule getDriveActionRule() {
+		return getDriveActionAccess().getRule();
 	}
 	
 	//MoveBack:
 	//	'MoveBackwards'
-	//	distance=INT 'meters';
+	//	meters=INT 'meters';
 	public MoveBackElements getMoveBackAccess() {
 		return pMoveBack;
 	}

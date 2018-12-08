@@ -5,8 +5,8 @@ package mars.ru.des.robot.taskDSL.util;
 
 import mars.ru.des.robot.taskDSL.Action;
 import mars.ru.des.robot.taskDSL.Avoid;
-import mars.ru.des.robot.taskDSL.AvoidAction;
-import mars.ru.des.robot.taskDSL.Detectors;
+import mars.ru.des.robot.taskDSL.Detector;
+import mars.ru.des.robot.taskDSL.DriveAction;
 import mars.ru.des.robot.taskDSL.DriveUntil;
 import mars.ru.des.robot.taskDSL.FollowLine;
 import mars.ru.des.robot.taskDSL.Investigate;
@@ -85,17 +85,17 @@ public class TaskDSLSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case TaskDSLPackage.TASK:
-      {
-        Task task = (Task)theEObject;
-        T result = caseTask(task);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case TaskDSLPackage.MISSION:
       {
         Mission mission = (Mission)theEObject;
         T result = caseMission(mission);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TaskDSLPackage.TASK:
+      {
+        Task task = (Task)theEObject;
+        T result = caseTask(task);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -106,10 +106,10 @@ public class TaskDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TaskDSLPackage.DETECTORS:
+      case TaskDSLPackage.DETECTOR:
       {
-        Detectors detectors = (Detectors)theEObject;
-        T result = caseDetectors(detectors);
+        Detector detector = (Detector)theEObject;
+        T result = caseDetector(detector);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -152,10 +152,10 @@ public class TaskDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TaskDSLPackage.AVOID_ACTION:
+      case TaskDSLPackage.DRIVE_ACTION:
       {
-        AvoidAction avoidAction = (AvoidAction)theEObject;
-        T result = caseAvoidAction(avoidAction);
+        DriveAction driveAction = (DriveAction)theEObject;
+        T result = caseDriveAction(driveAction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -163,7 +163,7 @@ public class TaskDSLSwitch<T> extends Switch<T>
       {
         MoveBack moveBack = (MoveBack)theEObject;
         T result = caseMoveBack(moveBack);
-        if (result == null) result = caseAvoidAction(moveBack);
+        if (result == null) result = caseDriveAction(moveBack);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -171,28 +171,12 @@ public class TaskDSLSwitch<T> extends Switch<T>
       {
         Turn turn = (Turn)theEObject;
         T result = caseTurn(turn);
-        if (result == null) result = caseAvoidAction(turn);
+        if (result == null) result = caseDriveAction(turn);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       default: return defaultCase(theEObject);
     }
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Task</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Task</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTask(Task object)
-  {
-    return null;
   }
 
   /**
@@ -207,6 +191,22 @@ public class TaskDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMission(Mission object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Task</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Task</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTask(Task object)
   {
     return null;
   }
@@ -228,17 +228,17 @@ public class TaskDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Detectors</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Detector</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Detectors</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Detector</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDetectors(Detectors object)
+  public T caseDetector(Detector object)
   {
     return null;
   }
@@ -324,17 +324,17 @@ public class TaskDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Avoid Action</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Drive Action</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Avoid Action</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Drive Action</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAvoidAction(AvoidAction object)
+  public T caseDriveAction(DriveAction object)
   {
     return null;
   }

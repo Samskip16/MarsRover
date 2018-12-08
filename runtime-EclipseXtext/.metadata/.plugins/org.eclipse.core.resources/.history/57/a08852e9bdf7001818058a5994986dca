@@ -1,0 +1,10 @@
+class ColorFinder(Action):
+    
+    def __init__(self, colors, speed):
+        self.colors = colors
+        self.speed = speed
+        
+        self.cs = ColorSensor()
+    
+    def execute(self):
+        return True

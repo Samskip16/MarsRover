@@ -5,9 +5,9 @@ package mars.ru.des.robot.taskDSL.impl;
 
 import mars.ru.des.robot.taskDSL.Action;
 import mars.ru.des.robot.taskDSL.Avoid;
-import mars.ru.des.robot.taskDSL.AvoidAction;
 import mars.ru.des.robot.taskDSL.Color;
-import mars.ru.des.robot.taskDSL.Detectors;
+import mars.ru.des.robot.taskDSL.Detector;
+import mars.ru.des.robot.taskDSL.DriveAction;
 import mars.ru.des.robot.taskDSL.DriveUntil;
 import mars.ru.des.robot.taskDSL.FollowLine;
 import mars.ru.des.robot.taskDSL.Investigate;
@@ -81,16 +81,16 @@ public class TaskDSLFactoryImpl extends EFactoryImpl implements TaskDSLFactory
   {
     switch (eClass.getClassifierID())
     {
-      case TaskDSLPackage.TASK: return createTask();
       case TaskDSLPackage.MISSION: return createMission();
+      case TaskDSLPackage.TASK: return createTask();
       case TaskDSLPackage.ACTION: return createAction();
-      case TaskDSLPackage.DETECTORS: return createDetectors();
+      case TaskDSLPackage.DETECTOR: return createDetector();
       case TaskDSLPackage.DRIVE_UNTIL: return createDriveUntil();
       case TaskDSLPackage.INVESTIGATE: return createInvestigate();
       case TaskDSLPackage.SPEAK: return createSpeak();
       case TaskDSLPackage.FOLLOW_LINE: return createFollowLine();
       case TaskDSLPackage.AVOID: return createAvoid();
-      case TaskDSLPackage.AVOID_ACTION: return createAvoidAction();
+      case TaskDSLPackage.DRIVE_ACTION: return createDriveAction();
       case TaskDSLPackage.MOVE_BACK: return createMoveBack();
       case TaskDSLPackage.TURN: return createTurn();
       default:
@@ -145,10 +145,10 @@ public class TaskDSLFactoryImpl extends EFactoryImpl implements TaskDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Task createTask()
+  public Mission createMission()
   {
-    TaskImpl task = new TaskImpl();
-    return task;
+    MissionImpl mission = new MissionImpl();
+    return mission;
   }
 
   /**
@@ -156,10 +156,10 @@ public class TaskDSLFactoryImpl extends EFactoryImpl implements TaskDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Mission createMission()
+  public Task createTask()
   {
-    MissionImpl mission = new MissionImpl();
-    return mission;
+    TaskImpl task = new TaskImpl();
+    return task;
   }
 
   /**
@@ -178,10 +178,10 @@ public class TaskDSLFactoryImpl extends EFactoryImpl implements TaskDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Detectors createDetectors()
+  public Detector createDetector()
   {
-    DetectorsImpl detectors = new DetectorsImpl();
-    return detectors;
+    DetectorImpl detector = new DetectorImpl();
+    return detector;
   }
 
   /**
@@ -244,10 +244,10 @@ public class TaskDSLFactoryImpl extends EFactoryImpl implements TaskDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AvoidAction createAvoidAction()
+  public DriveAction createDriveAction()
   {
-    AvoidActionImpl avoidAction = new AvoidActionImpl();
-    return avoidAction;
+    DriveActionImpl driveAction = new DriveActionImpl();
+    return driveAction;
   }
 
   /**

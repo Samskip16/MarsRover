@@ -1,9 +1,0 @@
-grammar mars.ru.des.robot.TaskDSL with org.eclipse.xtext.common.Terminals
-
-generate taskDSL "http://www.ru.mars/des/robot/TaskDSL"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';

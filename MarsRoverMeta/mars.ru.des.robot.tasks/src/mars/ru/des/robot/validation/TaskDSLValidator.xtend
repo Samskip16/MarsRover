@@ -7,8 +7,8 @@ import java.util.ArrayList
 import java.util.List
 import mars.ru.des.robot.taskDSL.Action
 import mars.ru.des.robot.taskDSL.Avoid
-import mars.ru.des.robot.taskDSL.AvoidAction
-import mars.ru.des.robot.taskDSL.Detectors
+import mars.ru.des.robot.taskDSL.Detector
+import mars.ru.des.robot.taskDSL.DriveAction
 import mars.ru.des.robot.taskDSL.DriveUntil
 import mars.ru.des.robot.taskDSL.MoveBack
 import mars.ru.des.robot.taskDSL.Task
@@ -34,12 +34,10 @@ class TaskDSLValidator extends AbstractTaskDSLValidator {
 		ac = task.getAction();
 		if (ac instanceof DriveUntil) {
 
-			for (Avoid av : task.getDetector().getAvoids()) {
-				if (av.getObject() === ac.getObject() &&
-					(
+			for (Avoid av : task.getDetector().getAvoiders()) {
+				if (av.getObject() === ac.getObject() && (
 						(av.getColor() !== null && ac.getColor() === null) ||
-						(av.getColor() === null && ac.getColor() !== null) || av.getColor() === ac.getColor())
-					) {
+					(av.getColor() === null && ac.getColor() !== null) || av.getColor() === ac.getColor())) {
 
 					s = stringifyAvoid(av);
 					error("Cannot avoid the same object as you are trying to find ('" + s + "')", null)
@@ -49,10 +47,10 @@ class TaskDSLValidator extends AbstractTaskDSLValidator {
 	}
 
 	@Check
-	def checkAvoidObjectsMultiplyDefined(Detectors detectors) {
+	def checkAvoidObjectsMultiplyDefined(Detector detector) {
 		avoidObjects = new ArrayList();
 
-		for (Avoid av : detectors.getAvoids()) {
+		for (Avoid av : detector.getAvoiders()) {
 			s = stringifyAvoid(av);
 
 			if (avoidObjects.contains(s)) {
@@ -67,17 +65,17 @@ class TaskDSLValidator extends AbstractTaskDSLValidator {
 	def checkAvoidActionSequence(Avoid av) {
 		cls = null;
 
-		for (AvoidAction ava : av.getAvoidActions()) {
-			if (cls !== null && cls === ava.getClass())
+		for (DriveAction da : av.getAvoidActions()) {
+			if (cls !== null && cls === da.getClass())
 				warning("Should combine two similar avoidActions together", null);
 
-			cls = ava.getClass;
+			cls = da.getClass;
 		}
 	}
 
 	@Check
 	def distanceInRange(MoveBack action) {
-		if (action.getDistance() < 0 || action.getDistance() > 100)
+		if (action.getMeters() < 0 || action.getMeters() > 100)
 			error('Distance should be inside achievable bounds (0, 100)', null)
 	}
 

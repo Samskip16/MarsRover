@@ -2,22 +2,22 @@ grammar mars.ru.des.robot.TaskDSL with org.eclipse.xtext.common.Terminals
 
 generate taskDSL "http://www.ru.mars/des/robot/TaskDSL"
 
-//Mission: 'Mission:' name = ID
-//	"tasks:"
-//	tasks = [Task | ID]
-//;
+Mission: 'Mission:' name = ID
+	"tasks:"
+	tasks = [Task | ID]
+;
 
 Task: 'Task:' name = ID
 	action = Action
-	(detector = Detectors)?
+	(detector = Detector)?
 ;
 	
 Action: 'action:'
 	DriveUntil | Investigate | Speak | FollowLine
 ;
 
-Detectors: 'detectors:'
-	avoids += Avoid+
+Detector: 'detectors:'
+	avoiders += Avoid+
 ;
 
 DriveUntil: 'Drive' 
@@ -44,15 +44,15 @@ Avoid: 'Avoid'
 	(color = Color)?
 	object = Object
 	'By'
-	avoidActions += AvoidAction+
+	avoidActions += DriveAction+
 ;
 
-AvoidAction:
+DriveAction:
 	(MoveBack | Turn) 'and'?
 ;
 
 MoveBack: 'MoveBackwards'
-	distance = INT 'meters'
+	meters = INT 'meters'
 ;
 
 Turn: 'Turn'

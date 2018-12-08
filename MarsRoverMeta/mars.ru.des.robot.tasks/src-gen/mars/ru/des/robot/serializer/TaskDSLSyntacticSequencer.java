@@ -20,12 +20,12 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class TaskDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected TaskDSLGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_AvoidAction_AndKeyword_1_q;
+	protected AbstractElementAlias match_DriveAction_AndKeyword_1_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (TaskDSLGrammarAccess) access;
-		match_AvoidAction_AndKeyword_1_q = new TokenAlias(false, true, grammarAccess.getAvoidActionAccess().getAndKeyword_1());
+		match_DriveAction_AndKeyword_1_q = new TokenAlias(false, true, grammarAccess.getDriveActionAccess().getAndKeyword_1());
 	}
 	
 	@Override
@@ -40,8 +40,8 @@ public class TaskDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_AvoidAction_AndKeyword_1_q.equals(syntax))
-				emit_AvoidAction_AndKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_DriveAction_AndKeyword_1_q.equals(syntax))
+				emit_DriveAction_AndKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -52,9 +52,9 @@ public class TaskDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     degrees=INT 'degrees' (ambiguity) (rule end)
-	 *     distance=INT 'meters' (ambiguity) (rule end)
+	 *     meters=INT 'meters' (ambiguity) (rule end)
 	 */
-	protected void emit_AvoidAction_AndKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_DriveAction_AndKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

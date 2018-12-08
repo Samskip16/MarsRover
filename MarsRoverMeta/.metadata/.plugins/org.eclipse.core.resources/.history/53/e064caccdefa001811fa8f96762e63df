@@ -1,0 +1,18 @@
+package robot.tasks.generator
+
+import robot.tasks.taskDSL.Sensor
+
+class DslHelper {
+
+	def static String sensorToPythonClass(Sensor sensor) {
+		switch (sensor) {
+			case Sensor.SIGHT:
+				return "Distance()"
+			case Sensor.TOUCH:
+				return "Touching()"
+			default:
+				return ""
+		}
+	}
+
+}

@@ -86,12 +86,12 @@ public interface Task extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Detector</em>' containment reference.
-   * @see #setDetector(Detectors)
+   * @see #setDetector(Detector)
    * @see mars.ru.des.robot.taskDSL.TaskDSLPackage#getTask_Detector()
    * @model containment="true"
    * @generated
    */
-  Detectors getDetector();
+  Detector getDetector();
 
   /**
    * Sets the value of the '{@link mars.ru.des.robot.taskDSL.Task#getDetector <em>Detector</em>}' containment reference.
@@ -101,6 +101,6 @@ public interface Task extends EObject
    * @see #getDetector()
    * @generated
    */
-  void setDetector(Detectors value);
+  void setDetector(Detector value);
 
 } // Task

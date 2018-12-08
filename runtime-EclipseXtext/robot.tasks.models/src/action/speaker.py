@@ -1,15 +1,14 @@
 from ev3dev2.sound import Sound
 
-from singleton import Singleton
+from src.action.action import Action
 
 
-class Speaker(metaclass=Singleton):
+class Speaker(Action):
 
-    def __init__(self):
-        self.s = Sound()
+    def __init__(self, text):
+        self.text = text
+        self.sound = Sound()
 
-    def speak(self, text):
-        self.s.speak(text)
-
-    def play_blyat(self):
-        self.s.play("blyat.wav")
+    def execute(self):
+        self.sound.speak(self.text)
+        return True

@@ -87,7 +87,7 @@ public interface Avoid extends EObject
 
   /**
    * Returns the value of the '<em><b>Avoid Actions</b></em>' containment reference list.
-   * The list contents are of type {@link mars.ru.des.robot.taskDSL.AvoidAction}.
+   * The list contents are of type {@link mars.ru.des.robot.taskDSL.DriveAction}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Avoid Actions</em>' containment reference list isn't clear,
@@ -99,6 +99,6 @@ public interface Avoid extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<AvoidAction> getAvoidActions();
+  EList<DriveAction> getAvoidActions();
 
 } // Avoid

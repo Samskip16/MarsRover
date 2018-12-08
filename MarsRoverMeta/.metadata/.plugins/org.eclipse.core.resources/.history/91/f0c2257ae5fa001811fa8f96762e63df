@@ -1,0 +1,45 @@
+package mars.ru.des.robot.generator
+
+import java.util.List
+import mars.ru.des.robot.taskDSL.Color
+import mars.ru.des.robot.taskDSL.DriveAction
+import mars.ru.des.robot.taskDSL.MoveBack
+import mars.ru.des.robot.taskDSL.Speed
+import mars.ru.des.robot.taskDSL.Turn
+
+class DslHelper {
+
+	static String s;
+
+	def static String toString(Color color) {
+		if (color === null) {
+			return "[Color.RED, Color.GREEN, Color.BLUE]"
+		} else {
+			return "Color." + color.toString()
+		}
+	}
+
+	def static String toString(Speed speed) {
+		if (speed === null) {
+			return "Speed.NORMAL"
+		} else {
+			return "Speed." + speed.toString()
+		}
+	}
+
+	def static String toString(List<DriveAction> driveActions) {
+		s = "";
+		for (DriveAction action : driveActions) {
+			s += driveActionToString(action) + ""
+		}
+	}
+
+	def static String driveActionToString(MoveBack action) {
+		return "DriveAction(Speed.NORMAL," + action.getDistance() + ", 0)"
+	}
+
+	def static String driveActionToString(Turn action) {
+		return "DriveAction(Speed.NORMAL, 0," + action.getDegrees() + ")"
+	}
+
+}

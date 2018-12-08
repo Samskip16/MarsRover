@@ -1,0 +1,8 @@
+from test.pickletester import metaclass
+from singleton import Singleton
+
+class SensorCollector(metaclass=Singleton):
+    
+    
+    def collect(self):
+        

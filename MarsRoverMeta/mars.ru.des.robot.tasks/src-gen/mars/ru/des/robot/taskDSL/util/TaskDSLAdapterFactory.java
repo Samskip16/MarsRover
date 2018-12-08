@@ -5,8 +5,8 @@ package mars.ru.des.robot.taskDSL.util;
 
 import mars.ru.des.robot.taskDSL.Action;
 import mars.ru.des.robot.taskDSL.Avoid;
-import mars.ru.des.robot.taskDSL.AvoidAction;
-import mars.ru.des.robot.taskDSL.Detectors;
+import mars.ru.des.robot.taskDSL.Detector;
+import mars.ru.des.robot.taskDSL.DriveAction;
 import mars.ru.des.robot.taskDSL.DriveUntil;
 import mars.ru.des.robot.taskDSL.FollowLine;
 import mars.ru.des.robot.taskDSL.Investigate;
@@ -88,14 +88,14 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
     new TaskDSLSwitch<Adapter>()
     {
       @Override
-      public Adapter caseTask(Task object)
-      {
-        return createTaskAdapter();
-      }
-      @Override
       public Adapter caseMission(Mission object)
       {
         return createMissionAdapter();
+      }
+      @Override
+      public Adapter caseTask(Task object)
+      {
+        return createTaskAdapter();
       }
       @Override
       public Adapter caseAction(Action object)
@@ -103,9 +103,9 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
         return createActionAdapter();
       }
       @Override
-      public Adapter caseDetectors(Detectors object)
+      public Adapter caseDetector(Detector object)
       {
-        return createDetectorsAdapter();
+        return createDetectorAdapter();
       }
       @Override
       public Adapter caseDriveUntil(DriveUntil object)
@@ -133,9 +133,9 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
         return createAvoidAdapter();
       }
       @Override
-      public Adapter caseAvoidAction(AvoidAction object)
+      public Adapter caseDriveAction(DriveAction object)
       {
-        return createAvoidActionAdapter();
+        return createDriveActionAdapter();
       }
       @Override
       public Adapter caseMoveBack(MoveBack object)
@@ -170,21 +170,6 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.Task <em>Task</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see mars.ru.des.robot.taskDSL.Task
-   * @generated
-   */
-  public Adapter createTaskAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.Mission <em>Mission</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -195,6 +180,21 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMissionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.Task <em>Task</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see mars.ru.des.robot.taskDSL.Task
+   * @generated
+   */
+  public Adapter createTaskAdapter()
   {
     return null;
   }
@@ -215,16 +215,16 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.Detectors <em>Detectors</em>}'.
+   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.Detector <em>Detector</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see mars.ru.des.robot.taskDSL.Detectors
+   * @see mars.ru.des.robot.taskDSL.Detector
    * @generated
    */
-  public Adapter createDetectorsAdapter()
+  public Adapter createDetectorAdapter()
   {
     return null;
   }
@@ -305,16 +305,16 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.AvoidAction <em>Avoid Action</em>}'.
+   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.DriveAction <em>Drive Action</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see mars.ru.des.robot.taskDSL.AvoidAction
+   * @see mars.ru.des.robot.taskDSL.DriveAction
    * @generated
    */
-  public Adapter createAvoidActionAdapter()
+  public Adapter createDriveActionAdapter()
   {
     return null;
   }

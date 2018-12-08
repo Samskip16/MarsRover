@@ -59,6 +59,43 @@ public interface TaskDSLPackage extends EPackage
   TaskDSLPackage eINSTANCE = mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl.init();
 
   /**
+   * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.MissionImpl <em>Mission</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see mars.ru.des.robot.taskDSL.impl.MissionImpl
+   * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getMission()
+   * @generated
+   */
+  int MISSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MISSION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Tasks</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MISSION__TASKS = 1;
+
+  /**
+   * The number of structural features of the '<em>Mission</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MISSION_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.TaskImpl <em>Task</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -66,7 +103,7 @@ public interface TaskDSLPackage extends EPackage
    * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getTask()
    * @generated
    */
-  int TASK = 0;
+  int TASK = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -105,43 +142,6 @@ public interface TaskDSLPackage extends EPackage
   int TASK_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.MissionImpl <em>Mission</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see mars.ru.des.robot.taskDSL.impl.MissionImpl
-   * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getMission()
-   * @generated
-   */
-  int MISSION = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MISSION__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Tasks</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MISSION__TASKS = 1;
-
-  /**
-   * The number of structural features of the '<em>Mission</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MISSION_FEATURE_COUNT = 2;
-
-  /**
    * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.ActionImpl <em>Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -161,32 +161,32 @@ public interface TaskDSLPackage extends EPackage
   int ACTION_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.DetectorsImpl <em>Detectors</em>}' class.
+   * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.DetectorImpl <em>Detector</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see mars.ru.des.robot.taskDSL.impl.DetectorsImpl
-   * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getDetectors()
+   * @see mars.ru.des.robot.taskDSL.impl.DetectorImpl
+   * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getDetector()
    * @generated
    */
-  int DETECTORS = 3;
+  int DETECTOR = 3;
 
   /**
-   * The feature id for the '<em><b>Avoids</b></em>' containment reference list.
+   * The feature id for the '<em><b>Avoiders</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DETECTORS__AVOIDS = 0;
+  int DETECTOR__AVOIDERS = 0;
 
   /**
-   * The number of structural features of the '<em>Detectors</em>' class.
+   * The number of structural features of the '<em>Detector</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DETECTORS_FEATURE_COUNT = 1;
+  int DETECTOR_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.DriveUntilImpl <em>Drive Until</em>}' class.
@@ -365,23 +365,23 @@ public interface TaskDSLPackage extends EPackage
   int AVOID_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.AvoidActionImpl <em>Avoid Action</em>}' class.
+   * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.DriveActionImpl <em>Drive Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see mars.ru.des.robot.taskDSL.impl.AvoidActionImpl
-   * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getAvoidAction()
+   * @see mars.ru.des.robot.taskDSL.impl.DriveActionImpl
+   * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getDriveAction()
    * @generated
    */
-  int AVOID_ACTION = 9;
+  int DRIVE_ACTION = 9;
 
   /**
-   * The number of structural features of the '<em>Avoid Action</em>' class.
+   * The number of structural features of the '<em>Drive Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AVOID_ACTION_FEATURE_COUNT = 0;
+  int DRIVE_ACTION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.MoveBackImpl <em>Move Back</em>}' class.
@@ -394,13 +394,13 @@ public interface TaskDSLPackage extends EPackage
   int MOVE_BACK = 10;
 
   /**
-   * The feature id for the '<em><b>Distance</b></em>' attribute.
+   * The feature id for the '<em><b>Meters</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MOVE_BACK__DISTANCE = AVOID_ACTION_FEATURE_COUNT + 0;
+  int MOVE_BACK__METERS = DRIVE_ACTION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Move Back</em>' class.
@@ -409,7 +409,7 @@ public interface TaskDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOVE_BACK_FEATURE_COUNT = AVOID_ACTION_FEATURE_COUNT + 1;
+  int MOVE_BACK_FEATURE_COUNT = DRIVE_ACTION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link mars.ru.des.robot.taskDSL.impl.TurnImpl <em>Turn</em>}' class.
@@ -428,7 +428,7 @@ public interface TaskDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TURN__DEGREES = AVOID_ACTION_FEATURE_COUNT + 0;
+  int TURN__DEGREES = DRIVE_ACTION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Turn</em>' class.
@@ -437,7 +437,7 @@ public interface TaskDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TURN_FEATURE_COUNT = AVOID_ACTION_FEATURE_COUNT + 1;
+  int TURN_FEATURE_COUNT = DRIVE_ACTION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link mars.ru.des.robot.taskDSL.Object <em>Object</em>}' enum.
@@ -469,6 +469,38 @@ public interface TaskDSLPackage extends EPackage
    */
   int COLOR = 14;
 
+
+  /**
+   * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.Mission <em>Mission</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Mission</em>'.
+   * @see mars.ru.des.robot.taskDSL.Mission
+   * @generated
+   */
+  EClass getMission();
+
+  /**
+   * Returns the meta object for the attribute '{@link mars.ru.des.robot.taskDSL.Mission#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see mars.ru.des.robot.taskDSL.Mission#getName()
+   * @see #getMission()
+   * @generated
+   */
+  EAttribute getMission_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link mars.ru.des.robot.taskDSL.Mission#getTasks <em>Tasks</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Tasks</em>'.
+   * @see mars.ru.des.robot.taskDSL.Mission#getTasks()
+   * @see #getMission()
+   * @generated
+   */
+  EReference getMission_Tasks();
 
   /**
    * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.Task <em>Task</em>}'.
@@ -514,38 +546,6 @@ public interface TaskDSLPackage extends EPackage
   EReference getTask_Detector();
 
   /**
-   * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.Mission <em>Mission</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Mission</em>'.
-   * @see mars.ru.des.robot.taskDSL.Mission
-   * @generated
-   */
-  EClass getMission();
-
-  /**
-   * Returns the meta object for the attribute '{@link mars.ru.des.robot.taskDSL.Mission#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see mars.ru.des.robot.taskDSL.Mission#getName()
-   * @see #getMission()
-   * @generated
-   */
-  EAttribute getMission_Name();
-
-  /**
-   * Returns the meta object for the reference '{@link mars.ru.des.robot.taskDSL.Mission#getTasks <em>Tasks</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Tasks</em>'.
-   * @see mars.ru.des.robot.taskDSL.Mission#getTasks()
-   * @see #getMission()
-   * @generated
-   */
-  EReference getMission_Tasks();
-
-  /**
    * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.Action <em>Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -556,25 +556,25 @@ public interface TaskDSLPackage extends EPackage
   EClass getAction();
 
   /**
-   * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.Detectors <em>Detectors</em>}'.
+   * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.Detector <em>Detector</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Detectors</em>'.
-   * @see mars.ru.des.robot.taskDSL.Detectors
+   * @return the meta object for class '<em>Detector</em>'.
+   * @see mars.ru.des.robot.taskDSL.Detector
    * @generated
    */
-  EClass getDetectors();
+  EClass getDetector();
 
   /**
-   * Returns the meta object for the containment reference list '{@link mars.ru.des.robot.taskDSL.Detectors#getAvoids <em>Avoids</em>}'.
+   * Returns the meta object for the containment reference list '{@link mars.ru.des.robot.taskDSL.Detector#getAvoiders <em>Avoiders</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Avoids</em>'.
-   * @see mars.ru.des.robot.taskDSL.Detectors#getAvoids()
-   * @see #getDetectors()
+   * @return the meta object for the containment reference list '<em>Avoiders</em>'.
+   * @see mars.ru.des.robot.taskDSL.Detector#getAvoiders()
+   * @see #getDetector()
    * @generated
    */
-  EReference getDetectors_Avoids();
+  EReference getDetector_Avoiders();
 
   /**
    * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.DriveUntil <em>Drive Until</em>}'.
@@ -726,14 +726,14 @@ public interface TaskDSLPackage extends EPackage
   EReference getAvoid_AvoidActions();
 
   /**
-   * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.AvoidAction <em>Avoid Action</em>}'.
+   * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.DriveAction <em>Drive Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Avoid Action</em>'.
-   * @see mars.ru.des.robot.taskDSL.AvoidAction
+   * @return the meta object for class '<em>Drive Action</em>'.
+   * @see mars.ru.des.robot.taskDSL.DriveAction
    * @generated
    */
-  EClass getAvoidAction();
+  EClass getDriveAction();
 
   /**
    * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.MoveBack <em>Move Back</em>}'.
@@ -746,15 +746,15 @@ public interface TaskDSLPackage extends EPackage
   EClass getMoveBack();
 
   /**
-   * Returns the meta object for the attribute '{@link mars.ru.des.robot.taskDSL.MoveBack#getDistance <em>Distance</em>}'.
+   * Returns the meta object for the attribute '{@link mars.ru.des.robot.taskDSL.MoveBack#getMeters <em>Meters</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Distance</em>'.
-   * @see mars.ru.des.robot.taskDSL.MoveBack#getDistance()
+   * @return the meta object for the attribute '<em>Meters</em>'.
+   * @see mars.ru.des.robot.taskDSL.MoveBack#getMeters()
    * @see #getMoveBack()
    * @generated
    */
-  EAttribute getMoveBack_Distance();
+  EAttribute getMoveBack_Meters();
 
   /**
    * Returns the meta object for class '{@link mars.ru.des.robot.taskDSL.Turn <em>Turn</em>}'.
@@ -831,6 +831,32 @@ public interface TaskDSLPackage extends EPackage
   interface Literals
   {
     /**
+     * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.MissionImpl <em>Mission</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see mars.ru.des.robot.taskDSL.impl.MissionImpl
+     * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getMission()
+     * @generated
+     */
+    EClass MISSION = eINSTANCE.getMission();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MISSION__NAME = eINSTANCE.getMission_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Tasks</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MISSION__TASKS = eINSTANCE.getMission_Tasks();
+
+    /**
      * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.TaskImpl <em>Task</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -865,32 +891,6 @@ public interface TaskDSLPackage extends EPackage
     EReference TASK__DETECTOR = eINSTANCE.getTask_Detector();
 
     /**
-     * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.MissionImpl <em>Mission</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see mars.ru.des.robot.taskDSL.impl.MissionImpl
-     * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getMission()
-     * @generated
-     */
-    EClass MISSION = eINSTANCE.getMission();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MISSION__NAME = eINSTANCE.getMission_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Tasks</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MISSION__TASKS = eINSTANCE.getMission_Tasks();
-
-    /**
      * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.ActionImpl <em>Action</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -901,22 +901,22 @@ public interface TaskDSLPackage extends EPackage
     EClass ACTION = eINSTANCE.getAction();
 
     /**
-     * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.DetectorsImpl <em>Detectors</em>}' class.
+     * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.DetectorImpl <em>Detector</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see mars.ru.des.robot.taskDSL.impl.DetectorsImpl
-     * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getDetectors()
+     * @see mars.ru.des.robot.taskDSL.impl.DetectorImpl
+     * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getDetector()
      * @generated
      */
-    EClass DETECTORS = eINSTANCE.getDetectors();
+    EClass DETECTOR = eINSTANCE.getDetector();
 
     /**
-     * The meta object literal for the '<em><b>Avoids</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Avoiders</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DETECTORS__AVOIDS = eINSTANCE.getDetectors_Avoids();
+    EReference DETECTOR__AVOIDERS = eINSTANCE.getDetector_Avoiders();
 
     /**
      * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.DriveUntilImpl <em>Drive Until</em>}' class.
@@ -1041,14 +1041,14 @@ public interface TaskDSLPackage extends EPackage
     EReference AVOID__AVOID_ACTIONS = eINSTANCE.getAvoid_AvoidActions();
 
     /**
-     * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.AvoidActionImpl <em>Avoid Action</em>}' class.
+     * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.DriveActionImpl <em>Drive Action</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see mars.ru.des.robot.taskDSL.impl.AvoidActionImpl
-     * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getAvoidAction()
+     * @see mars.ru.des.robot.taskDSL.impl.DriveActionImpl
+     * @see mars.ru.des.robot.taskDSL.impl.TaskDSLPackageImpl#getDriveAction()
      * @generated
      */
-    EClass AVOID_ACTION = eINSTANCE.getAvoidAction();
+    EClass DRIVE_ACTION = eINSTANCE.getDriveAction();
 
     /**
      * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.MoveBackImpl <em>Move Back</em>}' class.
@@ -1061,12 +1061,12 @@ public interface TaskDSLPackage extends EPackage
     EClass MOVE_BACK = eINSTANCE.getMoveBack();
 
     /**
-     * The meta object literal for the '<em><b>Distance</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Meters</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MOVE_BACK__DISTANCE = eINSTANCE.getMoveBack_Distance();
+    EAttribute MOVE_BACK__METERS = eINSTANCE.getMoveBack_Meters();
 
     /**
      * The meta object literal for the '{@link mars.ru.des.robot.taskDSL.impl.TurnImpl <em>Turn</em>}' class.

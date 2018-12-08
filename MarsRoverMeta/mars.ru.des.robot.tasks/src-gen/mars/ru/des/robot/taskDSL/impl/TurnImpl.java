@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TurnImpl extends AvoidActionImpl implements Turn
+public class TurnImpl extends DriveActionImpl implements Turn
 {
   /**
    * The default value of the '{@link #getDegrees() <em>Degrees</em>}' attribute.

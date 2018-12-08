@@ -1,0 +1,14 @@
+class EdgeAvoider(Action):
+    
+    def __init__(self, colors):
+        self.color = 0
+        self.driveActions = [DriveData(100, 0), DriveData(0,40)]
+        
+        self.cs = ColorSensor()
+    
+    def triggered(self):
+        return self.cs.color is self.color
+    
+    def execute(self):
+        for a in self.driveActions:
+            a.drive()

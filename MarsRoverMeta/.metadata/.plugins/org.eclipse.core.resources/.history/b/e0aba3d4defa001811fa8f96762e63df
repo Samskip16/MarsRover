@@ -1,0 +1,13 @@
+package robot.tasks.generator
+
+import robot.tasks.taskDSL.Sensor
+
+class DslHelper {
+
+def static String colorToString(Color color) {}
+if(color === null){
+			return 
+		}
+		}
+
+}

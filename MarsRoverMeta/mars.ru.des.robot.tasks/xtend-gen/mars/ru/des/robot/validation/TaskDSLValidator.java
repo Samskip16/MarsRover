@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import mars.ru.des.robot.taskDSL.Action;
 import mars.ru.des.robot.taskDSL.Avoid;
-import mars.ru.des.robot.taskDSL.AvoidAction;
 import mars.ru.des.robot.taskDSL.Color;
-import mars.ru.des.robot.taskDSL.Detectors;
+import mars.ru.des.robot.taskDSL.Detector;
+import mars.ru.des.robot.taskDSL.DriveAction;
 import mars.ru.des.robot.taskDSL.DriveUntil;
 import mars.ru.des.robot.taskDSL.MoveBack;
 import mars.ru.des.robot.taskDSL.Task;
@@ -39,8 +39,8 @@ public class TaskDSLValidator extends AbstractTaskDSLValidator {
   public void checkActionAndDetectorObjectNotTheSame(final Task task) {
     this.ac = task.getAction();
     if ((this.ac instanceof DriveUntil)) {
-      EList<Avoid> _avoids = task.getDetector().getAvoids();
-      for (final Avoid av : _avoids) {
+      EList<Avoid> _avoiders = task.getDetector().getAvoiders();
+      for (final Avoid av : _avoiders) {
         if (((av.getObject() == ((DriveUntil)this.ac).getObject()) && 
           ((((av.getColor() != null) && (((DriveUntil)this.ac).getColor() == null)) || ((av.getColor() == null) && (((DriveUntil)this.ac).getColor() != null))) || (av.getColor() == ((DriveUntil)this.ac).getColor())))) {
           this.s = this.stringifyAvoid(av);
@@ -51,11 +51,11 @@ public class TaskDSLValidator extends AbstractTaskDSLValidator {
   }
   
   @Check
-  public void checkAvoidObjectsMultiplyDefined(final Detectors detectors) {
+  public void checkAvoidObjectsMultiplyDefined(final Detector detector) {
     ArrayList<String> _arrayList = new ArrayList<String>();
     this.avoidObjects = _arrayList;
-    EList<Avoid> _avoids = detectors.getAvoids();
-    for (final Avoid av : _avoids) {
+    EList<Avoid> _avoiders = detector.getAvoiders();
+    for (final Avoid av : _avoiders) {
       {
         this.s = this.stringifyAvoid(av);
         boolean _contains = this.avoidObjects.contains(this.s);
@@ -71,20 +71,20 @@ public class TaskDSLValidator extends AbstractTaskDSLValidator {
   @Check
   public void checkAvoidActionSequence(final Avoid av) {
     this.cls = null;
-    EList<AvoidAction> _avoidActions = av.getAvoidActions();
-    for (final AvoidAction ava : _avoidActions) {
+    EList<DriveAction> _avoidActions = av.getAvoidActions();
+    for (final DriveAction da : _avoidActions) {
       {
-        if (((this.cls != null) && (this.cls == ava.getClass()))) {
+        if (((this.cls != null) && (this.cls == da.getClass()))) {
           this.warning("Should combine two similar avoidActions together", null);
         }
-        this.cls = ava.getClass();
+        this.cls = da.getClass();
       }
     }
   }
   
   @Check
   public void distanceInRange(final MoveBack action) {
-    if (((action.getDistance() < 0) || (action.getDistance() > 100))) {
+    if (((action.getMeters() < 0) || (action.getMeters() > 100))) {
       this.error("Distance should be inside achievable bounds (0, 100)", null);
     }
   }
