@@ -1,0 +1,15 @@
+Mission: Mission
+	tasks: Task1 Task2
+
+Task: Task1
+	action: 	Drive SLOW Until GREEN LAKE Found
+	detectors: 	Avoid LAKE	By MoveBackwards 10 meters and 
+									Turn 3 degrees and
+									MoveBackwards 100 meters	
+									
+Task: Task2
+	action: 	Drive SLOW Until GREEN LAKE Found
+	detectors: 	Avoid LAKE	By MoveBackwards 10 meters and 
+									Turn 3 degrees and
+									MoveBackwards 100 meters							
+

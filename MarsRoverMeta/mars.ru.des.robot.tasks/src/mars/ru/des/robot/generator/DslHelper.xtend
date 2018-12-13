@@ -2,6 +2,7 @@ package mars.ru.des.robot.generator
 
 import mars.ru.des.robot.taskDSL.Color
 import mars.ru.des.robot.taskDSL.Speed
+import mars.ru.des.robot.taskDSL.Task
 
 class DslHelper {
 
@@ -9,7 +10,7 @@ class DslHelper {
 		if (color === null) {
 			return "[Color.RED, Color.GREEN, Color.BLUE]"
 		} else {
-			return "Color." + color.toString()
+			return "[Color." + color.toString() + "]"
 		}
 	}
 
@@ -19,5 +20,9 @@ class DslHelper {
 		} else {
 			return "Speed." + speed.toString()
 		}
+	}
+
+	def static String toName(Task task) {
+		return "task_" + task.getName()
 	}
 }

@@ -12,7 +12,8 @@ import mars.ru.des.robot.taskDSL.DriveAction
 import mars.ru.des.robot.taskDSL.DriveUntil
 import mars.ru.des.robot.taskDSL.MoveBack
 import mars.ru.des.robot.taskDSL.Task
-import mars.ru.des.robot.taskDSL.Turn
+import mars.ru.des.robot.taskDSL.TurnLeft
+import mars.ru.des.robot.taskDSL.TurnRight
 import org.eclipse.xtext.validation.Check
 
 /**
@@ -65,7 +66,7 @@ class TaskDSLValidator extends AbstractTaskDSLValidator {
 	def checkAvoidActionSequence(Avoid av) {
 		cls = null;
 
-		for (DriveAction da : av.getAvoidActions()) {
+		for (DriveAction da : av.getDriveActions()) {
 			if (cls !== null && cls === da.getClass())
 				warning("Should combine two similar avoidActions together", null);
 
@@ -75,14 +76,29 @@ class TaskDSLValidator extends AbstractTaskDSLValidator {
 
 	@Check
 	def distanceInRange(MoveBack action) {
+		if (action.getMeters() === 0)
+			warning('No use in driving 0 meters', null)
+
 		if (action.getMeters() < 0 || action.getMeters() > 100)
 			error('Distance should be inside achievable bounds (0, 100)', null)
 	}
 
 	@Check
-	def degreesInRange(Turn action) {
-		if (action.getDegrees() < -359 || action.getDegrees() > 359)
-			error('Distance should be inside achievable bounds (-359, 359)', null)
+	def degreesInRange(TurnLeft action) {
+		if (action.getDegrees() === 0)
+			warning('No use in turning 0 degrees', null)
+
+		if (action.getDegrees() > 359)
+			error('Distance should be inside achievable bounds (0, 359)', null)
+	}
+	
+	@Check
+	def degreesInRange(TurnRight action) {
+		if (action.getDegrees() === 0)
+			warning('No use in turning 0 degrees', null)
+
+		if (action.getDegrees() > 359)
+			error('Distance should be inside achievable bounds (0, 359)', null)
 	}
 
 	def private String stringifyAvoid(Avoid a) {

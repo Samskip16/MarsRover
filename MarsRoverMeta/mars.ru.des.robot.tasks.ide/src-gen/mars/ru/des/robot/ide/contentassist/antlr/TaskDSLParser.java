@@ -36,6 +36,7 @@ public class TaskDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getObjectAccess().getAlternatives(), "rule__Object__Alternatives");
 			builder.put(grammarAccess.getSpeedAccess().getAlternatives(), "rule__Speed__Alternatives");
 			builder.put(grammarAccess.getColorAccess().getAlternatives(), "rule__Color__Alternatives");
+			builder.put(grammarAccess.getDSLAccess().getGroup(), "rule__DSL__Group__0");
 			builder.put(grammarAccess.getMissionAccess().getGroup(), "rule__Mission__Group__0");
 			builder.put(grammarAccess.getTaskAccess().getGroup(), "rule__Task__Group__0");
 			builder.put(grammarAccess.getActionAccess().getGroup_0(), "rule__Action__Group_0__0");
@@ -47,7 +48,10 @@ public class TaskDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAvoidAccess().getGroup(), "rule__Avoid__Group__0");
 			builder.put(grammarAccess.getDriveActionAccess().getGroup(), "rule__DriveAction__Group__0");
 			builder.put(grammarAccess.getMoveBackAccess().getGroup(), "rule__MoveBack__Group__0");
-			builder.put(grammarAccess.getTurnAccess().getGroup(), "rule__Turn__Group__0");
+			builder.put(grammarAccess.getTurnLeftAccess().getGroup(), "rule__TurnLeft__Group__0");
+			builder.put(grammarAccess.getTurnRightAccess().getGroup(), "rule__TurnRight__Group__0");
+			builder.put(grammarAccess.getDSLAccess().getMissionsAssignment_0(), "rule__DSL__MissionsAssignment_0");
+			builder.put(grammarAccess.getDSLAccess().getTasksAssignment_1(), "rule__DSL__TasksAssignment_1");
 			builder.put(grammarAccess.getMissionAccess().getNameAssignment_1(), "rule__Mission__NameAssignment_1");
 			builder.put(grammarAccess.getMissionAccess().getTasksAssignment_3(), "rule__Mission__TasksAssignment_3");
 			builder.put(grammarAccess.getTaskAccess().getNameAssignment_1(), "rule__Task__NameAssignment_1");
@@ -62,9 +66,10 @@ public class TaskDSLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getFollowLineAccess().getDistanceAssignment_1(), "rule__FollowLine__DistanceAssignment_1");
 			builder.put(grammarAccess.getAvoidAccess().getColorAssignment_1(), "rule__Avoid__ColorAssignment_1");
 			builder.put(grammarAccess.getAvoidAccess().getObjectAssignment_2(), "rule__Avoid__ObjectAssignment_2");
-			builder.put(grammarAccess.getAvoidAccess().getAvoidActionsAssignment_4(), "rule__Avoid__AvoidActionsAssignment_4");
+			builder.put(grammarAccess.getAvoidAccess().getDriveActionsAssignment_4(), "rule__Avoid__DriveActionsAssignment_4");
 			builder.put(grammarAccess.getMoveBackAccess().getMetersAssignment_1(), "rule__MoveBack__MetersAssignment_1");
-			builder.put(grammarAccess.getTurnAccess().getDegreesAssignment_1(), "rule__Turn__DegreesAssignment_1");
+			builder.put(grammarAccess.getTurnLeftAccess().getDegreesAssignment_1(), "rule__TurnLeft__DegreesAssignment_1");
+			builder.put(grammarAccess.getTurnRightAccess().getDegreesAssignment_1(), "rule__TurnRight__DegreesAssignment_1");
 		}
 	}
 	

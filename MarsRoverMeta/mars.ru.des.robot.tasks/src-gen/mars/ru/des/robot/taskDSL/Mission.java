@@ -3,6 +3,8 @@
  */
 package mars.ru.des.robot.taskDSL;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -51,29 +53,19 @@ public interface Mission extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Tasks</b></em>' reference.
+   * Returns the value of the '<em><b>Tasks</b></em>' reference list.
+   * The list contents are of type {@link mars.ru.des.robot.taskDSL.Task}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Tasks</em>' reference isn't clear,
+   * If the meaning of the '<em>Tasks</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Tasks</em>' reference.
-   * @see #setTasks(Task)
+   * @return the value of the '<em>Tasks</em>' reference list.
    * @see mars.ru.des.robot.taskDSL.TaskDSLPackage#getMission_Tasks()
    * @model
    * @generated
    */
-  Task getTasks();
-
-  /**
-   * Sets the value of the '{@link mars.ru.des.robot.taskDSL.Mission#getTasks <em>Tasks</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tasks</em>' reference.
-   * @see #getTasks()
-   * @generated
-   */
-  void setTasks(Task value);
+  EList<Task> getTasks();
 
 } // Mission

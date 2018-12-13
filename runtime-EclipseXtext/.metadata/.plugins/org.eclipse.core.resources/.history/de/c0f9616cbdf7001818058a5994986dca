@@ -1,4 +1,0 @@
-class ColorFinder(Action):
-    
-    def execute(self):
-        return True

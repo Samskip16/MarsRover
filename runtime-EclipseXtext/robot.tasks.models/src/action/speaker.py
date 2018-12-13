@@ -1,6 +1,6 @@
 from ev3dev2.sound import Sound
 
-from src.action.action import Action
+from action.action import Action
 
 
 class Speaker(Action):

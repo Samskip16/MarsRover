@@ -5,6 +5,7 @@ package mars.ru.des.robot.taskDSL.util;
 
 import mars.ru.des.robot.taskDSL.Action;
 import mars.ru.des.robot.taskDSL.Avoid;
+import mars.ru.des.robot.taskDSL.DSL;
 import mars.ru.des.robot.taskDSL.Detector;
 import mars.ru.des.robot.taskDSL.DriveAction;
 import mars.ru.des.robot.taskDSL.DriveUntil;
@@ -15,7 +16,8 @@ import mars.ru.des.robot.taskDSL.MoveBack;
 import mars.ru.des.robot.taskDSL.Speak;
 import mars.ru.des.robot.taskDSL.Task;
 import mars.ru.des.robot.taskDSL.TaskDSLPackage;
-import mars.ru.des.robot.taskDSL.Turn;
+import mars.ru.des.robot.taskDSL.TurnLeft;
+import mars.ru.des.robot.taskDSL.TurnRight;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -85,6 +87,13 @@ public class TaskDSLSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
+      case TaskDSLPackage.DSL:
+      {
+        DSL dsl = (DSL)theEObject;
+        T result = caseDSL(dsl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case TaskDSLPackage.MISSION:
       {
         Mission mission = (Mission)theEObject;
@@ -167,16 +176,40 @@ public class TaskDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TaskDSLPackage.TURN:
+      case TaskDSLPackage.TURN_LEFT:
       {
-        Turn turn = (Turn)theEObject;
-        T result = caseTurn(turn);
-        if (result == null) result = caseDriveAction(turn);
+        TurnLeft turnLeft = (TurnLeft)theEObject;
+        T result = caseTurnLeft(turnLeft);
+        if (result == null) result = caseDriveAction(turnLeft);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TaskDSLPackage.TURN_RIGHT:
+      {
+        TurnRight turnRight = (TurnRight)theEObject;
+        T result = caseTurnRight(turnRight);
+        if (result == null) result = caseDriveAction(turnRight);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       default: return defaultCase(theEObject);
     }
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>DSL</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>DSL</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDSL(DSL object)
+  {
+    return null;
   }
 
   /**
@@ -356,17 +389,33 @@ public class TaskDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Turn</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Turn Left</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Turn</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Turn Left</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTurn(Turn object)
+  public T caseTurnLeft(TurnLeft object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Turn Right</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Turn Right</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTurnRight(TurnRight object)
   {
     return null;
   }

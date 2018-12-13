@@ -1,7 +1,7 @@
 import time
 
-from src.action.action import Action
-from src.drive.motor import Motor
+from action.action import Action
+from drive.motor import Motor
 
 
 class Investigator(Action):

@@ -2,6 +2,7 @@ package mars.ru.des.robot.generator
 
 import java.util.List
 import mars.ru.des.robot.taskDSL.Avoid
+import mars.ru.des.robot.taskDSL.DSL
 import mars.ru.des.robot.taskDSL.DriveAction
 import mars.ru.des.robot.taskDSL.DriveUntil
 import mars.ru.des.robot.taskDSL.Investigate
@@ -10,25 +11,43 @@ import mars.ru.des.robot.taskDSL.MoveBack
 import mars.ru.des.robot.taskDSL.Object
 import mars.ru.des.robot.taskDSL.Speak
 import mars.ru.des.robot.taskDSL.Task
-import mars.ru.des.robot.taskDSL.Turn
+import mars.ru.des.robot.taskDSL.TurnLeft
+import mars.ru.des.robot.taskDSL.TurnRight
 
 class Brick1Generator {
 
-	def static generate(Mission mission) '''
+	def static generate(DSL dsl) '''
 		#!/usr/bin/env python3
-		from src.bluetooth.bluethooth import Bluetooth
+		from action.colorFinder import ColorFinder
+		from avoider.colorAvoider import ColorAvoider
+		from base.mission import Mission
+		from base.task import Task
+		from bt.bluethooth import Bluetooth
+		from color import Color
+		from drive.moveAction import MoveAction
+		from drive.rotateAction import RotateAction
+		from drive.speed import Speed
 		
 		
 		def run():
-		    for t in tasks:
-		        t.execute()
+		    for m in missions:
+		        m.execute()
 		
-		tasks = []
-		«FOR task : mission.getTasks()»
-			«generateAction(task)»
-		«ENDFOR»
 		
 		print("Starting brick 1")
+		missions = []
+		
+		
+		print("Creating tasks...")
+		«FOR task : dsl.getTasks()»
+			«generateTask(task)»
+		«ENDFOR»
+		
+		print("Creating missions...")
+		«FOR mission : dsl.getMissions()»
+			«generateMission(mission)»
+		«ENDFOR»
+		
 		print("Connecting as Client...")
 		
 		b = Bluetooth()
@@ -37,12 +56,18 @@ class Brick1Generator {
 		run()
 	'''
 
-	def generateTask(Task task) '''
-		Task t1 = Task()
-		t1.set_action(«generateAction(task.getAction())»)
+	def static generateMission(Mission mission) '''
+		«FOR task : mission.getTasks() BEFORE "missions.append(Mission([" SEPARATOR ", " AFTER "]))"»
+			«DslHelper.toName(task)»
+		«ENDFOR»
+	'''
+
+	def static generateTask(Task task) '''
+		«DslHelper.toName(task)» = Task()
+		«DslHelper.toName(task)».set_action(«generateAction(task.getAction())»)
 		
 		«FOR av : task.getDetector().getAvoiders()»
-			t1.add_avoider(«generateAction(av)»)
+			«DslHelper.toName(task)».add_avoider(«generateAvoider(av)»)
 		«ENDFOR»
 	'''
 
@@ -64,9 +89,9 @@ class Brick1Generator {
 
 	def static generateAvoider(Avoid avoid) '''
 		«IF avoid.getObject() === Object.LAKE»
-			ColorAvoider(«DslHelper.toString(avoid.getColor())», «DslHelper.toString(action.getSpeed())»)
+			ColorAvoider(«DslHelper.toString(avoid.getColor())», «toString(avoid.getDriveActions())»)
 		«ELSEIF avoid.getObject() === Object.ROCK»
-			RockAvoider(«toString(avoid.getAvoidActions())»)
+			RockAvoider(«toString(avoid.getDriveActions())»)
 		«ENDIF»
 	'''
 	
@@ -76,12 +101,16 @@ class Brick1Generator {
 		«ENDFOR»
 	'''
 
-	def static String driveActionToString(MoveBack action) {
-		return "DriveAction(Speed.NORMAL," + action.getDistance() + ", 0)"
+	def static dispatch String driveActionToString(MoveBack action) {
+		return "MoveAction(Speed.NORMAL, " + action.getMeters() + ")"
 	}
 
-	def static String driveActionToString(Turn action) {
-		return "DriveAction(Speed.NORMAL, 0," + action.getDegrees() + ")"
+	def static dispatch String driveActionToString(TurnLeft action) {
+		return "RotateAction(Speed.NORMAL, -" + action.getDegrees() + ")"
+	}
+	
+	def static dispatch String driveActionToString(TurnRight action) {
+		return "RotateAction(Speed.NORMAL, " + action.getDegrees() + ")"
 	}
 
 }

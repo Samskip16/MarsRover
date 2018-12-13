@@ -1,8 +1,0 @@
-Task: Hoi
-	action: 	Drive SLOW Until ROCK Found
-	detectors: 	Avoid GREEN LAKE 	By MoveBackwards 10 meters and 
-									Turn 50 degrees
-
-Mission: FindGangstas
-	tasks: Hoi
-

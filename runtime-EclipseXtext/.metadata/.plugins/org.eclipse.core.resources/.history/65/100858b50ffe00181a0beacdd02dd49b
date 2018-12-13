@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+from src.bluetooth.bluethooth import Bluetooth
+
+
+def run():
+    for m in missions:
+        m.execute()
+
+missions = []
+
+Task task_Task2 = Task()
+task_Task2.set_action(ColorFinder(Color.GREEN, Speed.SLOW)
+)
+
+task_Task2.add_avoider(ColorAvoider(Color.RED, Speed.NORMAL)
+)
+
+missions.append(new Mission([task_Task2
+]))
+
+print("Starting brick 1")
+print("Connecting as Client...")
+
+b = Bluetooth()
+b.connect_as_client()
+
+run()

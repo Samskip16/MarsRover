@@ -6,6 +6,7 @@ package mars.ru.des.robot.taskDSL.impl;
 import mars.ru.des.robot.taskDSL.Action;
 import mars.ru.des.robot.taskDSL.Avoid;
 import mars.ru.des.robot.taskDSL.Color;
+import mars.ru.des.robot.taskDSL.DSL;
 import mars.ru.des.robot.taskDSL.Detector;
 import mars.ru.des.robot.taskDSL.DriveAction;
 import mars.ru.des.robot.taskDSL.DriveUntil;
@@ -18,7 +19,8 @@ import mars.ru.des.robot.taskDSL.Speed;
 import mars.ru.des.robot.taskDSL.Task;
 import mars.ru.des.robot.taskDSL.TaskDSLFactory;
 import mars.ru.des.robot.taskDSL.TaskDSLPackage;
-import mars.ru.des.robot.taskDSL.Turn;
+import mars.ru.des.robot.taskDSL.TurnLeft;
+import mars.ru.des.robot.taskDSL.TurnRight;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -81,6 +83,7 @@ public class TaskDSLFactoryImpl extends EFactoryImpl implements TaskDSLFactory
   {
     switch (eClass.getClassifierID())
     {
+      case TaskDSLPackage.DSL: return createDSL();
       case TaskDSLPackage.MISSION: return createMission();
       case TaskDSLPackage.TASK: return createTask();
       case TaskDSLPackage.ACTION: return createAction();
@@ -92,7 +95,8 @@ public class TaskDSLFactoryImpl extends EFactoryImpl implements TaskDSLFactory
       case TaskDSLPackage.AVOID: return createAvoid();
       case TaskDSLPackage.DRIVE_ACTION: return createDriveAction();
       case TaskDSLPackage.MOVE_BACK: return createMoveBack();
-      case TaskDSLPackage.TURN: return createTurn();
+      case TaskDSLPackage.TURN_LEFT: return createTurnLeft();
+      case TaskDSLPackage.TURN_RIGHT: return createTurnRight();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -138,6 +142,17 @@ public class TaskDSLFactoryImpl extends EFactoryImpl implements TaskDSLFactory
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DSL createDSL()
+  {
+    DSLImpl dsl = new DSLImpl();
+    return dsl;
   }
 
   /**
@@ -266,10 +281,21 @@ public class TaskDSLFactoryImpl extends EFactoryImpl implements TaskDSLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Turn createTurn()
+  public TurnLeft createTurnLeft()
   {
-    TurnImpl turn = new TurnImpl();
-    return turn;
+    TurnLeftImpl turnLeft = new TurnLeftImpl();
+    return turnLeft;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TurnRight createTurnRight()
+  {
+    TurnRightImpl turnRight = new TurnRightImpl();
+    return turnRight;
   }
 
   /**

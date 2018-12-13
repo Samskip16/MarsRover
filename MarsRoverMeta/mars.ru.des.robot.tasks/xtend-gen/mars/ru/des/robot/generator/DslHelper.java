@@ -2,6 +2,7 @@ package mars.ru.des.robot.generator;
 
 import mars.ru.des.robot.taskDSL.Color;
 import mars.ru.des.robot.taskDSL.Speed;
+import mars.ru.des.robot.taskDSL.Task;
 
 @SuppressWarnings("all")
 public class DslHelper {
@@ -10,7 +11,8 @@ public class DslHelper {
       return "[Color.RED, Color.GREEN, Color.BLUE]";
     } else {
       String _string = color.toString();
-      return ("Color." + _string);
+      String _plus = ("[Color." + _string);
+      return (_plus + "]");
     }
   }
   
@@ -21,5 +23,10 @@ public class DslHelper {
       String _string = speed.toString();
       return ("Speed." + _string);
     }
+  }
+  
+  public static String toName(final Task task) {
+    String _name = task.getName();
+    return ("task_" + _name);
   }
 }

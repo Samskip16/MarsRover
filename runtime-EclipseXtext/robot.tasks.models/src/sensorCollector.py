@@ -3,8 +3,8 @@ import time
 from ev3dev.core import UltrasonicSensor, TouchSensor
 from ev3dev2._platform.ev3 import INPUT_1, INPUT_4
 
-from src.bluetooth.bluethooth import Bluetooth
-from src.util.singleton import Singleton
+from bt.bluethooth import Bluetooth
+from util.singleton import Singleton
 
 
 class SensorCollector(metaclass=Singleton):

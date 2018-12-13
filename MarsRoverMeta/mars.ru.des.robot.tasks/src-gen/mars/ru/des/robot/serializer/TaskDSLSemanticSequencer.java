@@ -7,6 +7,7 @@ import com.google.inject.Inject;
 import java.util.Set;
 import mars.ru.des.robot.services.TaskDSLGrammarAccess;
 import mars.ru.des.robot.taskDSL.Avoid;
+import mars.ru.des.robot.taskDSL.DSL;
 import mars.ru.des.robot.taskDSL.Detector;
 import mars.ru.des.robot.taskDSL.DriveUntil;
 import mars.ru.des.robot.taskDSL.FollowLine;
@@ -16,7 +17,8 @@ import mars.ru.des.robot.taskDSL.MoveBack;
 import mars.ru.des.robot.taskDSL.Speak;
 import mars.ru.des.robot.taskDSL.Task;
 import mars.ru.des.robot.taskDSL.TaskDSLPackage;
-import mars.ru.des.robot.taskDSL.Turn;
+import mars.ru.des.robot.taskDSL.TurnLeft;
+import mars.ru.des.robot.taskDSL.TurnRight;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.xtext.Action;
@@ -44,6 +46,9 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case TaskDSLPackage.AVOID:
 				sequence_Avoid(context, (Avoid) semanticObject); 
 				return; 
+			case TaskDSLPackage.DSL:
+				sequence_DSL(context, (DSL) semanticObject); 
+				return; 
 			case TaskDSLPackage.DETECTOR:
 				sequence_Detector(context, (Detector) semanticObject); 
 				return; 
@@ -68,8 +73,11 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case TaskDSLPackage.TASK:
 				sequence_Task(context, (Task) semanticObject); 
 				return; 
-			case TaskDSLPackage.TURN:
-				sequence_Turn(context, (Turn) semanticObject); 
+			case TaskDSLPackage.TURN_LEFT:
+				sequence_TurnLeft(context, (TurnLeft) semanticObject); 
+				return; 
+			case TaskDSLPackage.TURN_RIGHT:
+				sequence_TurnRight(context, (TurnRight) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -81,9 +89,21 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Avoid returns Avoid
 	 *
 	 * Constraint:
-	 *     (color=Color? object=Object avoidActions+=DriveAction+)
+	 *     (color=Color? object=Object driveActions+=DriveAction+)
 	 */
 	protected void sequence_Avoid(ISerializationContext context, Avoid semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DSL returns DSL
+	 *
+	 * Constraint:
+	 *     ((missions+=Mission+ tasks+=Task+) | tasks+=Task+)?
+	 */
+	protected void sequence_DSL(ISerializationContext context, DSL semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -156,19 +176,10 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Mission returns Mission
 	 *
 	 * Constraint:
-	 *     (name=ID tasks=[Task|ID])
+	 *     (name=ID tasks+=[Task|ID]+)
 	 */
 	protected void sequence_Mission(ISerializationContext context, Mission semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TaskDSLPackage.Literals.MISSION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TaskDSLPackage.Literals.MISSION__NAME));
-			if (transientValues.isValueTransient(semanticObject, TaskDSLPackage.Literals.MISSION__TASKS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TaskDSLPackage.Literals.MISSION__TASKS));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMissionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getMissionAccess().getTasksTaskIDTerminalRuleCall_3_0_1(), semanticObject.eGet(TaskDSLPackage.Literals.MISSION__TASKS, false));
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -224,19 +235,38 @@ public class TaskDSLSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
-	 *     DriveAction returns Turn
-	 *     Turn returns Turn
+	 *     DriveAction returns TurnLeft
+	 *     TurnLeft returns TurnLeft
 	 *
 	 * Constraint:
 	 *     degrees=INT
 	 */
-	protected void sequence_Turn(ISerializationContext context, Turn semanticObject) {
+	protected void sequence_TurnLeft(ISerializationContext context, TurnLeft semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TaskDSLPackage.Literals.TURN__DEGREES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TaskDSLPackage.Literals.TURN__DEGREES));
+			if (transientValues.isValueTransient(semanticObject, TaskDSLPackage.Literals.TURN_LEFT__DEGREES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TaskDSLPackage.Literals.TURN_LEFT__DEGREES));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTurnAccess().getDegreesINTTerminalRuleCall_1_0(), semanticObject.getDegrees());
+		feeder.accept(grammarAccess.getTurnLeftAccess().getDegreesINTTerminalRuleCall_1_0(), semanticObject.getDegrees());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DriveAction returns TurnRight
+	 *     TurnRight returns TurnRight
+	 *
+	 * Constraint:
+	 *     degrees=INT
+	 */
+	protected void sequence_TurnRight(ISerializationContext context, TurnRight semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TaskDSLPackage.Literals.TURN_RIGHT__DEGREES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TaskDSLPackage.Literals.TURN_RIGHT__DEGREES));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTurnRightAccess().getDegreesINTTerminalRuleCall_1_0(), semanticObject.getDegrees());
 		feeder.finish();
 	}
 	

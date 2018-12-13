@@ -1,7 +1,0 @@
-from test.pickletester import metaclass
-from sympy.core.singleton import Singleton
-class SensorCollector(metaclass = Singleton):
-    
-    
-    def collect(self):
-        

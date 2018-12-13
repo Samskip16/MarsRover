@@ -20,6 +20,10 @@
       <genEnumLiterals ecoreEnumLiteral="TaskDSL.ecore#//Color/GREEN"/>
       <genEnumLiterals ecoreEnumLiteral="TaskDSL.ecore#//Color/BLUE"/>
     </genEnums>
+    <genClasses ecoreClass="TaskDSL.ecore#//DSL">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//DSL/missions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//DSL/tasks"/>
+    </genClasses>
     <genClasses ecoreClass="TaskDSL.ecore#//Mission">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//Mission/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Mission/tasks"/>
@@ -50,14 +54,17 @@
     <genClasses ecoreClass="TaskDSL.ecore#//Avoid">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//Avoid/color"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//Avoid/object"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Avoid/avoidActions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TaskDSL.ecore#//Avoid/driveActions"/>
     </genClasses>
     <genClasses ecoreClass="TaskDSL.ecore#//DriveAction"/>
     <genClasses ecoreClass="TaskDSL.ecore#//MoveBack">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//MoveBack/meters"/>
     </genClasses>
-    <genClasses ecoreClass="TaskDSL.ecore#//Turn">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//Turn/degrees"/>
+    <genClasses ecoreClass="TaskDSL.ecore#//TurnLeft">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//TurnLeft/degrees"/>
+    </genClasses>
+    <genClasses ecoreClass="TaskDSL.ecore#//TurnRight">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TaskDSL.ecore#//TurnRight/degrees"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

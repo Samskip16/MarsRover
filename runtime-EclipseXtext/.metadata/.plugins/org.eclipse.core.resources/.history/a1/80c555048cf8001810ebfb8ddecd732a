@@ -1,5 +1,0 @@
-class DriveData:
-    
-    def __init__(self, meters, degrees):
-        self.meters = meters
-        self.degrees = degrees

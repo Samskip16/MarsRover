@@ -1,6 +1,6 @@
 from ev3dev.core import UltrasonicSensor
 
-from src.avoider.avoider import Avoider
+from avoider.avoider import Avoider
 
 
 class RockAvoider(Avoider):

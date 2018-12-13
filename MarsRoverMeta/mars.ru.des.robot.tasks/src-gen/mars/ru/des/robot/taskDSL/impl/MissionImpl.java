@@ -3,17 +3,22 @@
  */
 package mars.ru.des.robot.taskDSL.impl;
 
+import java.util.Collection;
+
 import mars.ru.des.robot.taskDSL.Mission;
 import mars.ru.des.robot.taskDSL.Task;
 import mars.ru.des.robot.taskDSL.TaskDSLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,14 +57,14 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTasks() <em>Tasks</em>}' reference.
+   * The cached value of the '{@link #getTasks() <em>Tasks</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getTasks()
    * @generated
    * @ordered
    */
-  protected Task tasks;
+  protected EList<Task> tasks;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,42 +115,13 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
    * <!-- end-user-doc -->
    * @generated
    */
-  public Task getTasks()
+  public EList<Task> getTasks()
   {
-    if (tasks != null && tasks.eIsProxy())
+    if (tasks == null)
     {
-      InternalEObject oldTasks = (InternalEObject)tasks;
-      tasks = (Task)eResolveProxy(oldTasks);
-      if (tasks != oldTasks)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TaskDSLPackage.MISSION__TASKS, oldTasks, tasks));
-      }
+      tasks = new EObjectResolvingEList<Task>(Task.class, this, TaskDSLPackage.MISSION__TASKS);
     }
     return tasks;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Task basicGetTasks()
-  {
-    return tasks;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTasks(Task newTasks)
-  {
-    Task oldTasks = tasks;
-    tasks = newTasks;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TaskDSLPackage.MISSION__TASKS, oldTasks, tasks));
   }
 
   /**
@@ -161,8 +137,7 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
       case TaskDSLPackage.MISSION__NAME:
         return getName();
       case TaskDSLPackage.MISSION__TASKS:
-        if (resolve) return getTasks();
-        return basicGetTasks();
+        return getTasks();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -172,6 +147,7 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -181,7 +157,8 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
         setName((String)newValue);
         return;
       case TaskDSLPackage.MISSION__TASKS:
-        setTasks((Task)newValue);
+        getTasks().clear();
+        getTasks().addAll((Collection<? extends Task>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -201,7 +178,7 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
         setName(NAME_EDEFAULT);
         return;
       case TaskDSLPackage.MISSION__TASKS:
-        setTasks((Task)null);
+        getTasks().clear();
         return;
     }
     super.eUnset(featureID);
@@ -220,7 +197,7 @@ public class MissionImpl extends MinimalEObjectImpl.Container implements Mission
       case TaskDSLPackage.MISSION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TaskDSLPackage.MISSION__TASKS:
-        return tasks != null;
+        return tasks != null && !tasks.isEmpty();
     }
     return super.eIsSet(featureID);
   }

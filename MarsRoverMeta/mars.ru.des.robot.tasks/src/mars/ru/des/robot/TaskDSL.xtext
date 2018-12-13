@@ -2,9 +2,14 @@ grammar mars.ru.des.robot.TaskDSL with org.eclipse.xtext.common.Terminals
 
 generate taskDSL "http://www.ru.mars/des/robot/TaskDSL"
 
+DSL:
+	missions += Mission*
+	tasks += Task* 
+;
+
 Mission: 'Mission:' name = ID
 	"tasks:"
-	tasks = [Task | ID]
+	tasks += [Task]+
 ;
 
 Task: 'Task:' name = ID
@@ -44,18 +49,22 @@ Avoid: 'Avoid'
 	(color = Color)?
 	object = Object
 	'By'
-	avoidActions += DriveAction+
+	driveActions += DriveAction+
 ;
 
 DriveAction:
-	(MoveBack | Turn) 'and'?
+	(MoveBack | TurnLeft | TurnRight) 'and'?
 ;
 
 MoveBack: 'MoveBackwards'
 	meters = INT 'meters'
 ;
 
-Turn: 'Turn'
+TurnLeft: 'TurnLeft'
+	degrees = INT 'degrees'
+;
+
+TurnRight: 'TurnRight'
 	degrees = INT 'degrees'
 ;
 

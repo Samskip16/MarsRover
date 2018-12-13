@@ -1,25 +1,25 @@
 from ev3dev2.motor import MoveTank, OUTPUT_A, OUTPUT_B, OUTPUT_D, SpeedPercent, LargeMotor
 
-from src.drive.speed import Speed
-from src.util.singleton import Singleton
+from drive.speed import Speed
+from util.singleton import Singleton
 
 
 class Motor(metaclass=Singleton):
 
     def __init__(self):
         self.tank = MoveTank(OUTPUT_A, OUTPUT_D)
-        self.arm = LargeMotor(OUTPUT_B)
+        # self.arm = LargeMotor(OUTPUT_B)
 
     def drive_on(self, speed):
         per = self.__to_speed_per(speed)
-        self.drive_on(per)
-
-    def drive_meters(self, speed, meters):
-        per = self.__to_speed_per(speed)
-        self.drive_meters(per, meters)
+        self.__drive_on(per)
 
     def __drive_on(self, speed_per):
         self.tank.on(SpeedPercent(speed_per), SpeedPercent(speed_per))
+
+    def drive_meters(self, speed, meters):
+        per = self.__to_speed_per(speed)
+        self.__drive_meters(per, meters)
 
     def __drive_meters(self, speed_per, meters):
         if meters < 0:
@@ -32,7 +32,10 @@ class Motor(metaclass=Singleton):
         per = self.__to_speed_per(speed)
 
         degrees = degrees * 2
-        self.tank.on_for_degrees(SpeedPercent(per), SpeedPercent(0), degrees)
+        if degrees > 0:
+            self.tank.on_for_degrees(SpeedPercent(per), SpeedPercent(0), degrees)
+        else:
+            self.tank.on_for_degrees(SpeedPercent(0), SpeedPercent(per), degrees)
 
     def stop_drive(self):
         self.tank.stop()

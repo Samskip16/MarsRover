@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_5fNcQPonEeiO5IWfJUw16w" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_5fNcQfonEeiO5IWfJUw16w" bindingContexts="_5fQfs_onEeiO5IWfJUw16w">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtext.Xtext&quot; name=&quot;TaskDSL.xtext&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSL.xtext&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSL.xtext&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLRuntimeModule.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSLRuntimeModule.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSLRuntimeModule.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLGenerator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/TaskDSLGenerator.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/TaskDSLGenerator.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;Brick1Generator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLValidator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/validation/TaskDSLValidator.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/validation/TaskDSLValidator.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Mission.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Mission.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Mission.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;DslHelper.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/DslHelper.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/DslHelper.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;Brick2Generator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick2Generator.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick2Generator.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Avoid.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Avoid.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Avoid.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Detectors.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Detectors.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Detectors.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Task.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Task.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Task.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;EObject.class&quot; tooltip=&quot;org.eclipse.emf.ecore.EObject&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=mars.ru.des.robot.tasks/C:\/Users\/Sam\/.p2\/pool\/plugins\/org.eclipse.emf.ecore_2.15.0.v20180722-1159.jar&amp;lt;org.eclipse.emf.ecore(EObject.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DriveAction.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/DriveAction.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/DriveAction.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Color.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Color.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Color.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Brick1Generator.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MyDSLqnp.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/MyDSLqnp.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/MyDSLqnp.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;EList.class&quot; tooltip=&quot;org.eclipse.emf.common.util.EList&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=mars.ru.des.robot.tasks/C:\/Users\/Sam\/.p2\/pool\/plugins\/org.eclipse.emf.common_2.15.0.v20180723-1316.jar&amp;lt;org.eclipse.emf.common.util(EList.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLValidator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/validation/TaskDSLValidator.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/validation/TaskDSLValidator.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;Brick1Generator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtext.Xtext&quot; name=&quot;TaskDSL.xtext&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSL.xtext&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSL.xtext&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;DslHelper.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/DslHelper.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/DslHelper.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Avoid.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Avoid.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Avoid.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DriveAction.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/DriveAction.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/DriveAction.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MoveBack.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/MoveBack.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/MoveBack.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Turn.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Turn.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Turn.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;EList.class&quot; tooltip=&quot;org.eclipse.emf.common.util.EList&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=mars.ru.des.robot.tasks/C:\/Users\/Sam\/.p2\/pool\/plugins\/org.eclipse.emf.common_2.15.0.v20180723-1316.jar&amp;lt;org.eclipse.emf.common.util(EList.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Mission.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Mission.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Mission.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLGenerator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/TaskDSLGenerator.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/TaskDSLGenerator.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLRuntimeModule.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSLRuntimeModule.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSLRuntimeModule.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;Brick2Generator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick2Generator.xtend&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick2Generator.xtend&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Detectors.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Detectors.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Detectors.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Task.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Task.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Task.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;EObject.class&quot; tooltip=&quot;org.eclipse.emf.ecore.EObject&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=mars.ru.des.robot.tasks/C:\/Users\/Sam\/.p2\/pool\/plugins\/org.eclipse.emf.ecore_2.15.0.v20180722-1159.jar&amp;lt;org.eclipse.emf.ecore(EObject.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Color.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Color.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Color.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Brick1Generator.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MyDSLqnp.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/MyDSLqnp.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/MyDSLqnp.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_5fNcQfonEeiO5IWfJUw16w" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_5fNcQvonEeiO5IWfJUw16w" label="%trimmedwindow.label.eclipseSDK" x="284" y="-8" width="974" height="1047">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_5fNcQfonEeiO5IWfJUw16w" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_5fNcQvonEeiO5IWfJUw16w" label="%trimmedwindow.label.eclipseSDK" x="953" y="0" width="974" height="1047">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -103,12 +103,11 @@
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_5fODU_onEeiO5IWfJUw16w" containerData="8483" selectedElement="_5fODVPonEeiO5IWfJUw16w" horizontal="true">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_5fODVPonEeiO5IWfJUw16w" containerData="5000" selectedElement="_5fODVvonEeiO5IWfJUw16w">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_5fODVPonEeiO5IWfJUw16w" containerData="5000" selectedElement="_5fODVfonEeiO5IWfJUw16w">
                 <children xsi:type="advanced:Placeholder" xmi:id="_5fODVfonEeiO5IWfJUw16w" elementId="org.eclipse.ui.editorss" containerData="7231" ref="_5fOrBfonEeiO5IWfJUw16w"/>
                 <children xsi:type="basic:PartStack" xmi:id="_5fODVvonEeiO5IWfJUw16w" elementId="bottom" visible="false" containerData="2769" selectedElement="_5fODW_onEeiO5IWfJUw16w">
                   <tags>org.eclipse.e4.secondaryDataStack</tags>
                   <tags>Minimized</tags>
-                  <tags>active</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_5fODV_onEeiO5IWfJUw16w" elementId="org.eclipse.ui.views.ProblemView" ref="_5fOrMfonEeiO5IWfJUw16w" closeable="true">
                     <tags>View</tags>
                     <tags>categoryTag:General</tags>
@@ -196,105 +195,84 @@
       <tags>View</tags>
       <tags>categoryTag:Help</tags>
     </sharedElements>
-    <sharedElements xsi:type="advanced:Area" xmi:id="_5fOrBfonEeiO5IWfJUw16w" elementId="org.eclipse.ui.editorss" selectedElement="_yTdvkPrdEeinfugTioTXgQ">
-      <children xsi:type="basic:PartSashContainer" xmi:id="_yTdvkPrdEeinfugTioTXgQ" selectedElement="_yTdvkfrdEeinfugTioTXgQ" horizontal="true">
-        <children xsi:type="basic:PartStack" xmi:id="_5fOrBvonEeiO5IWfJUw16w" elementId="org.eclipse.e4.primaryDataStack" containerData="5321" selectedElement="_-txvoPrnEeinfugTioTXgQ">
-          <tags>org.eclipse.e4.primaryDataStack</tags>
-          <tags>EditorStack</tags>
-          <children xsi:type="basic:Part" xmi:id="_5fOrDvonEeiO5IWfJUw16w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TaskDSLValidator.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLValidator.xtend&quot; partName=&quot;TaskDSLValidator.xtend&quot; title=&quot;TaskDSLValidator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/validation/TaskDSLValidator.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/validation/TaskDSLValidator.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;318&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.xtend.core.Xtend</tags>
-            <tags>removeOnHide</tags>
-          </children>
-          <children xsi:type="basic:Part" xmi:id="_5fOrD_onEeiO5IWfJUw16w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TaskDSLGenerator.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLGenerator.xtend&quot; partName=&quot;TaskDSLGenerator.xtend&quot; title=&quot;TaskDSLGenerator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/TaskDSLGenerator.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/TaskDSLGenerator.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;807&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.xtend.core.Xtend</tags>
-            <tags>removeOnHide</tags>
-          </children>
-          <children xsi:type="basic:Part" xmi:id="_sbVUAPrcEeinfugTioTXgQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Brick1Generator.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;Brick1Generator.xtend&quot; partName=&quot;Brick1Generator.xtend&quot; title=&quot;Brick1Generator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;743&quot; selectionTopPixel=&quot;252&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.xtend.core.Xtend</tags>
-            <tags>removeOnHide</tags>
-          </children>
-          <children xsi:type="basic:Part" xmi:id="_WqX9kPrmEeinfugTioTXgQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Task.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Task.java&quot; partName=&quot;Task.java&quot; title=&quot;Task.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Task.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Task.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2958&quot; selectionTopPixel=&quot;1496&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-            <tags>removeOnHide</tags>
-          </children>
-          <children xsi:type="basic:Part" xmi:id="_hqYHUPrmEeinfugTioTXgQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Avoid.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Avoid.java&quot; partName=&quot;Avoid.java&quot; title=&quot;Avoid.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Avoid.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Avoid.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;15&quot; selectionOffset=&quot;3476&quot; selectionTopPixel=&quot;1452&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-            <tags>removeOnHide</tags>
-          </children>
-          <children xsi:type="basic:Part" xmi:id="_vWdAUPrnEeinfugTioTXgQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Mission.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Mission.java&quot; partName=&quot;Mission.java&quot; title=&quot;Mission.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Mission.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Mission.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1551&quot; selectionTopPixel=&quot;858&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-            <tags>removeOnHide</tags>
-          </children>
-          <children xsi:type="basic:Part" xmi:id="_-txvoPrnEeinfugTioTXgQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TaskDSLRuntimeModule.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLRuntimeModule.xtend&quot; partName=&quot;TaskDSLRuntimeModule.xtend&quot; title=&quot;TaskDSLRuntimeModule.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSLRuntimeModule.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSLRuntimeModule.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;4&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.xtend.core.Xtend</tags>
-            <tags>removeOnHide</tags>
-          </children>
+    <sharedElements xsi:type="advanced:Area" xmi:id="_5fOrBfonEeiO5IWfJUw16w" elementId="org.eclipse.ui.editorss" selectedElement="_yTdvkfrdEeinfugTioTXgQ">
+      <children xsi:type="basic:PartStack" xmi:id="_yTdvkfrdEeinfugTioTXgQ" elementId="PartStack@3983d505" selectedElement="_-0q1AP4MEeiKx4J-HHhnXw">
+        <tags>active</tags>
+        <children xsi:type="basic:Part" xmi:id="_5fOrB_onEeiO5IWfJUw16w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TaskDSL.xtext" iconURI="platform:/plugin/org.eclipse.xtext.xtext.ui/icons/editor.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtext.Xtext&quot; name=&quot;TaskDSL.xtext&quot; partName=&quot;TaskDSL.xtext&quot; title=&quot;TaskDSL.xtext&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSL.xtext&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSL.xtext&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;600&quot; selectionTopPixel=&quot;560&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.xtext.Xtext</tags>
+          <tags>removeOnHide</tags>
+          <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrCPonEeiO5IWfJUw16w" elementId="#TextEditorContext">
+            <tags>menuContribution:popup</tags>
+            <tags>popup:#TextEditorContext</tags>
+            <tags>popup:org.eclipse.xtext.Xtext.EditorContext</tags>
+            <tags>popup:#AbstractTextEditorContext</tags>
+          </menus>
+          <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrCfonEeiO5IWfJUw16w" elementId="#TextRulerContext">
+            <tags>menuContribution:popup</tags>
+            <tags>popup:#TextRulerContext</tags>
+            <tags>popup:org.eclipse.xtext.Xtext.RulerContext</tags>
+            <tags>popup:#AbstractTextEditorRulerContext</tags>
+          </menus>
+          <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrCvonEeiO5IWfJUw16w" elementId="#OverviewRulerContext">
+            <tags>menuContribution:popup</tags>
+            <tags>popup:#OverviewRulerContext</tags>
+          </menus>
+          <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrC_onEeiO5IWfJUw16w" elementId="#TextEditorContext">
+            <tags>menuContribution:popup</tags>
+            <tags>popup:#TextEditorContext</tags>
+            <tags>popup:org.eclipse.xtext.Xtext.EditorContext</tags>
+            <tags>popup:#AbstractTextEditorContext</tags>
+          </menus>
+          <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrDPonEeiO5IWfJUw16w" elementId="#TextRulerContext">
+            <tags>menuContribution:popup</tags>
+            <tags>popup:#TextRulerContext</tags>
+            <tags>popup:org.eclipse.xtext.Xtext.RulerContext</tags>
+            <tags>popup:#AbstractTextEditorRulerContext</tags>
+          </menus>
+          <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrDfonEeiO5IWfJUw16w" elementId="#OverviewRulerContext">
+            <tags>menuContribution:popup</tags>
+            <tags>popup:#OverviewRulerContext</tags>
+          </menus>
         </children>
-        <children xsi:type="basic:PartStack" xmi:id="_yTdvkfrdEeinfugTioTXgQ" elementId="PartStack@3983d505" containerData="4679" selectedElement="_5fOrB_onEeiO5IWfJUw16w">
-          <children xsi:type="basic:Part" xmi:id="_5fOrB_onEeiO5IWfJUw16w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TaskDSL.xtext" iconURI="platform:/plugin/org.eclipse.xtext.xtext.ui/icons/editor.gif" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtext.Xtext&quot; name=&quot;TaskDSL.xtext&quot; partName=&quot;TaskDSL.xtext&quot; title=&quot;TaskDSL.xtext&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSL.xtext&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/TaskDSL.xtext&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;6&quot; selectionOffset=&quot;828&quot; selectionTopPixel=&quot;78&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.xtext.Xtext</tags>
-            <tags>removeOnHide</tags>
-            <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrCPonEeiO5IWfJUw16w" elementId="#TextEditorContext">
-              <tags>menuContribution:popup</tags>
-              <tags>popup:#TextEditorContext</tags>
-              <tags>popup:org.eclipse.xtext.Xtext.EditorContext</tags>
-              <tags>popup:#AbstractTextEditorContext</tags>
-            </menus>
-            <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrCfonEeiO5IWfJUw16w" elementId="#TextRulerContext">
-              <tags>menuContribution:popup</tags>
-              <tags>popup:#TextRulerContext</tags>
-              <tags>popup:org.eclipse.xtext.Xtext.RulerContext</tags>
-              <tags>popup:#AbstractTextEditorRulerContext</tags>
-            </menus>
-            <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrCvonEeiO5IWfJUw16w" elementId="#OverviewRulerContext">
-              <tags>menuContribution:popup</tags>
-              <tags>popup:#OverviewRulerContext</tags>
-            </menus>
-            <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrC_onEeiO5IWfJUw16w" elementId="#TextEditorContext">
-              <tags>menuContribution:popup</tags>
-              <tags>popup:#TextEditorContext</tags>
-              <tags>popup:org.eclipse.xtext.Xtext.EditorContext</tags>
-              <tags>popup:#AbstractTextEditorContext</tags>
-            </menus>
-            <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrDPonEeiO5IWfJUw16w" elementId="#TextRulerContext">
-              <tags>menuContribution:popup</tags>
-              <tags>popup:#TextRulerContext</tags>
-              <tags>popup:org.eclipse.xtext.Xtext.RulerContext</tags>
-              <tags>popup:#AbstractTextEditorRulerContext</tags>
-            </menus>
-            <menus xsi:type="menu:PopupMenu" xmi:id="_5fOrDfonEeiO5IWfJUw16w" elementId="#OverviewRulerContext">
-              <tags>menuContribution:popup</tags>
-              <tags>popup:#OverviewRulerContext</tags>
-            </menus>
-          </children>
-          <children xsi:type="basic:Part" xmi:id="_v-HzYPreEeinfugTioTXgQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DslHelper.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;DslHelper.xtend&quot; partName=&quot;DslHelper.xtend&quot; title=&quot;DslHelper.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/DslHelper.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/DslHelper.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;138&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.xtend.core.Xtend</tags>
-            <tags>removeOnHide</tags>
-          </children>
-          <children xsi:type="basic:Part" xmi:id="_i4hx8PrlEeinfugTioTXgQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DriveAction.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DriveAction.java&quot; partName=&quot;DriveAction.java&quot; title=&quot;DriveAction.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/DriveAction.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/DriveAction.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;396&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-            <tags>removeOnHide</tags>
-          </children>
+        <children xsi:type="basic:Part" xmi:id="_v-HzYPreEeinfugTioTXgQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DslHelper.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;DslHelper.xtend&quot; partName=&quot;DslHelper.xtend&quot; title=&quot;DslHelper.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/DslHelper.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/DslHelper.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;355&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.xtend.core.Xtend</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_55988P4JEeiKx4J-HHhnXw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TaskDSLGenerator.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLGenerator.xtend&quot; partName=&quot;TaskDSLGenerator.xtend&quot; title=&quot;TaskDSLGenerator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/TaskDSLGenerator.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/TaskDSLGenerator.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;327&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.xtend.core.Xtend</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_-0q1AP4MEeiKx4J-HHhnXw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Brick1Generator.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;Brick1Generator.xtend&quot; partName=&quot;Brick1Generator.xtend&quot; title=&quot;Brick1Generator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/generator/Brick1Generator.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;229&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.xtend.core.Xtend</tags>
+          <tags>removeOnHide</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_kn4GEP4OEeiKx4J-HHhnXw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MoveBack.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MoveBack.java&quot; partName=&quot;MoveBack.java&quot; title=&quot;MoveBack.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/MoveBack.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/MoveBack.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;517&quot; selectionTopPixel=&quot;132&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_BjnKsP4REeiKx4J-HHhnXw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Avoid.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Avoid.java&quot; partName=&quot;Avoid.java&quot; title=&quot;Avoid.java&quot; tooltip=&quot;mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Avoid.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src-gen/mars/ru/des/robot/taskDSL/Avoid.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;15&quot; selectionOffset=&quot;3476&quot; selectionTopPixel=&quot;1430&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_MUO0oP4REeiKx4J-HHhnXw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TaskDSLValidator.xtend" iconURI="platform:/plugin/org.eclipse.xtend.ide/icons/xtend_file.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.xtend.core.Xtend&quot; name=&quot;TaskDSLValidator.xtend&quot; partName=&quot;TaskDSLValidator.xtend&quot; title=&quot;TaskDSLValidator.xtend&quot; tooltip=&quot;mars.ru.des.robot.tasks/src/mars/ru/des/robot/validation/TaskDSLValidator.xtend&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/mars.ru.des.robot.tasks/src/mars/ru/des/robot/validation/TaskDSLValidator.xtend&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2049&quot; selectionTopPixel=&quot;1443&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.xtend.core.Xtend</tags>
+          <tags>removeOnHide</tags>
         </children>
       </children>
     </sharedElements>
@@ -339,7 +317,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_5fOrMfonEeiO5IWfJUw16w" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.ProblemsView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings (3 items)&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_5fOrMvonEeiO5IWfJUw16w" elementId="org.eclipse.ui.views.ProblemView">
@@ -372,8 +350,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_5fOrOPonEeiO5IWfJUw16w" elementId="org.eclipse.ui.console.ConsoleView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -439,7 +415,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5fOrTfonEeiO5IWfJUw16w" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_JJTJwPrcEeinfugTioTXgQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_5fUKJ_onEeiO5IWfJUw16w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gw-NR_7PEeisMdI5i_LAdw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_5fUKJ_onEeiO5IWfJUw16w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5fOrWvonEeiO5IWfJUw16w" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -478,7 +454,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5fPRqvonEeiO5IWfJUw16w" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_JJTJzfrcEeinfugTioTXgQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_5fTjnfonEeiO5IWfJUw16w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gxH-SP7PEeisMdI5i_LAdw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_5fTjnfonEeiO5IWfJUw16w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5fPRtvonEeiO5IWfJUw16w" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -524,9 +500,10 @@
     </trimBars>
     <trimBars xmi:id="_5fPR0PonEeiO5IWfJUw16w" elementId="org.eclipse.ui.trim.vertical2" side="Right">
       <children xsi:type="menu:ToolControl" xmi:id="_5fPR0fonEeiO5IWfJUw16w" elementId="bottom(IDEWindow).(org.eclipse.jdt.ui.JavaPerspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+        <persistedState key="XSize" value="600"/>
+        <persistedState key="YSize" value="400"/>
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
-        <tags>MinimizedAndShowing</tags>
       </children>
     </trimBars>
   </children>

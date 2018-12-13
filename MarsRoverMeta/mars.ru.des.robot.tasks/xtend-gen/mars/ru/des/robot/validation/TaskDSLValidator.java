@@ -13,7 +13,8 @@ import mars.ru.des.robot.taskDSL.DriveAction;
 import mars.ru.des.robot.taskDSL.DriveUntil;
 import mars.ru.des.robot.taskDSL.MoveBack;
 import mars.ru.des.robot.taskDSL.Task;
-import mars.ru.des.robot.taskDSL.Turn;
+import mars.ru.des.robot.taskDSL.TurnLeft;
+import mars.ru.des.robot.taskDSL.TurnRight;
 import mars.ru.des.robot.validation.AbstractTaskDSLValidator;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtext.validation.Check;
@@ -71,8 +72,8 @@ public class TaskDSLValidator extends AbstractTaskDSLValidator {
   @Check
   public void checkAvoidActionSequence(final Avoid av) {
     this.cls = null;
-    EList<DriveAction> _avoidActions = av.getAvoidActions();
-    for (final DriveAction da : _avoidActions) {
+    EList<DriveAction> _driveActions = av.getDriveActions();
+    for (final DriveAction da : _driveActions) {
       {
         if (((this.cls != null) && (this.cls == da.getClass()))) {
           this.warning("Should combine two similar avoidActions together", null);
@@ -84,15 +85,41 @@ public class TaskDSLValidator extends AbstractTaskDSLValidator {
   
   @Check
   public void distanceInRange(final MoveBack action) {
+    int _meters = action.getMeters();
+    boolean _tripleEquals = (_meters == 0);
+    if (_tripleEquals) {
+      this.warning("No use in driving 0 meters", null);
+    }
     if (((action.getMeters() < 0) || (action.getMeters() > 100))) {
       this.error("Distance should be inside achievable bounds (0, 100)", null);
     }
   }
   
   @Check
-  public void degreesInRange(final Turn action) {
-    if (((action.getDegrees() < (-359)) || (action.getDegrees() > 359))) {
-      this.error("Distance should be inside achievable bounds (-359, 359)", null);
+  public void degreesInRange(final TurnLeft action) {
+    int _degrees = action.getDegrees();
+    boolean _tripleEquals = (_degrees == 0);
+    if (_tripleEquals) {
+      this.warning("No use in turning 0 degrees", null);
+    }
+    int _degrees_1 = action.getDegrees();
+    boolean _greaterThan = (_degrees_1 > 359);
+    if (_greaterThan) {
+      this.error("Distance should be inside achievable bounds (0, 359)", null);
+    }
+  }
+  
+  @Check
+  public void degreesInRange(final TurnRight action) {
+    int _degrees = action.getDegrees();
+    boolean _tripleEquals = (_degrees == 0);
+    if (_tripleEquals) {
+      this.warning("No use in turning 0 degrees", null);
+    }
+    int _degrees_1 = action.getDegrees();
+    boolean _greaterThan = (_degrees_1 > 359);
+    if (_greaterThan) {
+      this.error("Distance should be inside achievable bounds (0, 359)", null);
     }
   }
   

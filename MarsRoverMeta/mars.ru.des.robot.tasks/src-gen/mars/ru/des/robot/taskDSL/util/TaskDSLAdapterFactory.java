@@ -5,6 +5,7 @@ package mars.ru.des.robot.taskDSL.util;
 
 import mars.ru.des.robot.taskDSL.Action;
 import mars.ru.des.robot.taskDSL.Avoid;
+import mars.ru.des.robot.taskDSL.DSL;
 import mars.ru.des.robot.taskDSL.Detector;
 import mars.ru.des.robot.taskDSL.DriveAction;
 import mars.ru.des.robot.taskDSL.DriveUntil;
@@ -15,7 +16,8 @@ import mars.ru.des.robot.taskDSL.MoveBack;
 import mars.ru.des.robot.taskDSL.Speak;
 import mars.ru.des.robot.taskDSL.Task;
 import mars.ru.des.robot.taskDSL.TaskDSLPackage;
-import mars.ru.des.robot.taskDSL.Turn;
+import mars.ru.des.robot.taskDSL.TurnLeft;
+import mars.ru.des.robot.taskDSL.TurnRight;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -88,6 +90,11 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
     new TaskDSLSwitch<Adapter>()
     {
       @Override
+      public Adapter caseDSL(DSL object)
+      {
+        return createDSLAdapter();
+      }
+      @Override
       public Adapter caseMission(Mission object)
       {
         return createMissionAdapter();
@@ -143,9 +150,14 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
         return createMoveBackAdapter();
       }
       @Override
-      public Adapter caseTurn(Turn object)
+      public Adapter caseTurnLeft(TurnLeft object)
       {
-        return createTurnAdapter();
+        return createTurnLeftAdapter();
+      }
+      @Override
+      public Adapter caseTurnRight(TurnRight object)
+      {
+        return createTurnRightAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -168,6 +180,21 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
     return modelSwitch.doSwitch((EObject)target);
   }
 
+
+  /**
+   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.DSL <em>DSL</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see mars.ru.des.robot.taskDSL.DSL
+   * @generated
+   */
+  public Adapter createDSLAdapter()
+  {
+    return null;
+  }
 
   /**
    * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.Mission <em>Mission</em>}'.
@@ -335,16 +362,31 @@ public class TaskDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.Turn <em>Turn</em>}'.
+   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.TurnLeft <em>Turn Left</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see mars.ru.des.robot.taskDSL.Turn
+   * @see mars.ru.des.robot.taskDSL.TurnLeft
    * @generated
    */
-  public Adapter createTurnAdapter()
+  public Adapter createTurnLeftAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link mars.ru.des.robot.taskDSL.TurnRight <em>Turn Right</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see mars.ru.des.robot.taskDSL.TurnRight
+   * @generated
+   */
+  public Adapter createTurnRightAdapter()
   {
     return null;
   }

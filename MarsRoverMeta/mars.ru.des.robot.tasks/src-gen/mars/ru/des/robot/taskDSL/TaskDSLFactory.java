@@ -24,6 +24,15 @@ public interface TaskDSLFactory extends EFactory
   TaskDSLFactory eINSTANCE = mars.ru.des.robot.taskDSL.impl.TaskDSLFactoryImpl.init();
 
   /**
+   * Returns a new object of class '<em>DSL</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>DSL</em>'.
+   * @generated
+   */
+  DSL createDSL();
+
+  /**
    * Returns a new object of class '<em>Mission</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -123,13 +132,22 @@ public interface TaskDSLFactory extends EFactory
   MoveBack createMoveBack();
 
   /**
-   * Returns a new object of class '<em>Turn</em>'.
+   * Returns a new object of class '<em>Turn Left</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Turn</em>'.
+   * @return a new object of class '<em>Turn Left</em>'.
    * @generated
    */
-  Turn createTurn();
+  TurnLeft createTurnLeft();
+
+  /**
+   * Returns a new object of class '<em>Turn Right</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Turn Right</em>'.
+   * @generated
+   */
+  TurnRight createTurnRight();
 
   /**
    * Returns the package supported by this factory.

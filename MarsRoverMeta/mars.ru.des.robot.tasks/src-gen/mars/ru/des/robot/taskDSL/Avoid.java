@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link mars.ru.des.robot.taskDSL.Avoid#getColor <em>Color</em>}</li>
  *   <li>{@link mars.ru.des.robot.taskDSL.Avoid#getObject <em>Object</em>}</li>
- *   <li>{@link mars.ru.des.robot.taskDSL.Avoid#getAvoidActions <em>Avoid Actions</em>}</li>
+ *   <li>{@link mars.ru.des.robot.taskDSL.Avoid#getDriveActions <em>Drive Actions</em>}</li>
  * </ul>
  *
  * @see mars.ru.des.robot.taskDSL.TaskDSLPackage#getAvoid()
@@ -86,19 +86,19 @@ public interface Avoid extends EObject
   void setObject(mars.ru.des.robot.taskDSL.Object value);
 
   /**
-   * Returns the value of the '<em><b>Avoid Actions</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Drive Actions</b></em>' containment reference list.
    * The list contents are of type {@link mars.ru.des.robot.taskDSL.DriveAction}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Avoid Actions</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Drive Actions</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Avoid Actions</em>' containment reference list.
-   * @see mars.ru.des.robot.taskDSL.TaskDSLPackage#getAvoid_AvoidActions()
+   * @return the value of the '<em>Drive Actions</em>' containment reference list.
+   * @see mars.ru.des.robot.taskDSL.TaskDSLPackage#getAvoid_DriveActions()
    * @model containment="true"
    * @generated
    */
-  EList<DriveAction> getAvoidActions();
+  EList<DriveAction> getDriveActions();
 
 } // Avoid

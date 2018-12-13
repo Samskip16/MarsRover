@@ -4,7 +4,7 @@
 package mars.ru.des.robot.generator;
 
 import mars.ru.des.robot.generator.Brick1Generator;
-import mars.ru.des.robot.taskDSL.Mission;
+import mars.ru.des.robot.taskDSL.DSL;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
@@ -22,7 +22,7 @@ public class TaskDSLGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
     EObject _head = IteratorExtensions.<EObject>head(resource.getAllContents());
-    final Mission root = ((Mission) _head);
+    final DSL root = ((DSL) _head);
     if ((root != null)) {
       fsa.deleteFile("main.py");
       fsa.generateFile("brick1Main.py", Brick1Generator.generate(root));

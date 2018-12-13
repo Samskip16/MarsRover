@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link mars.ru.des.robot.taskDSL.impl.AvoidImpl#getColor <em>Color</em>}</li>
  *   <li>{@link mars.ru.des.robot.taskDSL.impl.AvoidImpl#getObject <em>Object</em>}</li>
- *   <li>{@link mars.ru.des.robot.taskDSL.impl.AvoidImpl#getAvoidActions <em>Avoid Actions</em>}</li>
+ *   <li>{@link mars.ru.des.robot.taskDSL.impl.AvoidImpl#getDriveActions <em>Drive Actions</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,14 +82,14 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
   protected mars.ru.des.robot.taskDSL.Object object = OBJECT_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getAvoidActions() <em>Avoid Actions</em>}' containment reference list.
+   * The cached value of the '{@link #getDriveActions() <em>Drive Actions</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAvoidActions()
+   * @see #getDriveActions()
    * @generated
    * @ordered
    */
-  protected EList<DriveAction> avoidActions;
+  protected EList<DriveAction> driveActions;
 
   /**
    * <!-- begin-user-doc -->
@@ -163,13 +163,13 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<DriveAction> getAvoidActions()
+  public EList<DriveAction> getDriveActions()
   {
-    if (avoidActions == null)
+    if (driveActions == null)
     {
-      avoidActions = new EObjectContainmentEList<DriveAction>(DriveAction.class, this, TaskDSLPackage.AVOID__AVOID_ACTIONS);
+      driveActions = new EObjectContainmentEList<DriveAction>(DriveAction.class, this, TaskDSLPackage.AVOID__DRIVE_ACTIONS);
     }
-    return avoidActions;
+    return driveActions;
   }
 
   /**
@@ -182,8 +182,8 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
   {
     switch (featureID)
     {
-      case TaskDSLPackage.AVOID__AVOID_ACTIONS:
-        return ((InternalEList<?>)getAvoidActions()).basicRemove(otherEnd, msgs);
+      case TaskDSLPackage.AVOID__DRIVE_ACTIONS:
+        return ((InternalEList<?>)getDriveActions()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -202,8 +202,8 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
         return getColor();
       case TaskDSLPackage.AVOID__OBJECT:
         return getObject();
-      case TaskDSLPackage.AVOID__AVOID_ACTIONS:
-        return getAvoidActions();
+      case TaskDSLPackage.AVOID__DRIVE_ACTIONS:
+        return getDriveActions();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -225,9 +225,9 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
       case TaskDSLPackage.AVOID__OBJECT:
         setObject((mars.ru.des.robot.taskDSL.Object)newValue);
         return;
-      case TaskDSLPackage.AVOID__AVOID_ACTIONS:
-        getAvoidActions().clear();
-        getAvoidActions().addAll((Collection<? extends DriveAction>)newValue);
+      case TaskDSLPackage.AVOID__DRIVE_ACTIONS:
+        getDriveActions().clear();
+        getDriveActions().addAll((Collection<? extends DriveAction>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -249,8 +249,8 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
       case TaskDSLPackage.AVOID__OBJECT:
         setObject(OBJECT_EDEFAULT);
         return;
-      case TaskDSLPackage.AVOID__AVOID_ACTIONS:
-        getAvoidActions().clear();
+      case TaskDSLPackage.AVOID__DRIVE_ACTIONS:
+        getDriveActions().clear();
         return;
     }
     super.eUnset(featureID);
@@ -270,8 +270,8 @@ public class AvoidImpl extends MinimalEObjectImpl.Container implements Avoid
         return color != COLOR_EDEFAULT;
       case TaskDSLPackage.AVOID__OBJECT:
         return object != OBJECT_EDEFAULT;
-      case TaskDSLPackage.AVOID__AVOID_ACTIONS:
-        return avoidActions != null && !avoidActions.isEmpty();
+      case TaskDSLPackage.AVOID__DRIVE_ACTIONS:
+        return driveActions != null && !driveActions.isEmpty();
     }
     return super.eIsSet(featureID);
   }

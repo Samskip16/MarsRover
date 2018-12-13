@@ -1,6 +1,6 @@
-from src.action.action import Action
-from src.drive.motor import Motor
-from src.util.store import Store
+from action.action import Action
+from drive.motor import Motor
+from util.store import Store
 
 
 class RockFinder(Action):

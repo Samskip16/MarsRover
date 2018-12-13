@@ -18,7 +18,8 @@ import mars.ru.des.robot.taskDSL.Speed;
 import mars.ru.des.robot.taskDSL.Task;
 import mars.ru.des.robot.taskDSL.TaskDSLFactory;
 import mars.ru.des.robot.taskDSL.TaskDSLPackage;
-import mars.ru.des.robot.taskDSL.Turn;
+import mars.ru.des.robot.taskDSL.TurnLeft;
+import mars.ru.des.robot.taskDSL.TurnRight;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -36,6 +37,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  */
 public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
 {
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dslEClass = null;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -118,7 +126,14 @@ public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass turnEClass = null;
+  private EClass turnLeftEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass turnRightEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -202,6 +217,36 @@ public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(TaskDSLPackage.eNS_URI, theTaskDSLPackage);
     return theTaskDSLPackage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDSL()
+  {
+    return dslEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDSL_Missions()
+  {
+    return (EReference)dslEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDSL_Tasks()
+  {
+    return (EReference)dslEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -439,7 +484,7 @@ public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAvoid_AvoidActions()
+  public EReference getAvoid_DriveActions()
   {
     return (EReference)avoidEClass.getEStructuralFeatures().get(2);
   }
@@ -479,9 +524,9 @@ public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getTurn()
+  public EClass getTurnLeft()
   {
-    return turnEClass;
+    return turnLeftEClass;
   }
 
   /**
@@ -489,9 +534,29 @@ public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTurn_Degrees()
+  public EAttribute getTurnLeft_Degrees()
   {
-    return (EAttribute)turnEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)turnLeftEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTurnRight()
+  {
+    return turnRightEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTurnRight_Degrees()
+  {
+    return (EAttribute)turnRightEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -554,6 +619,10 @@ public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
     isCreated = true;
 
     // Create classes and their features
+    dslEClass = createEClass(DSL);
+    createEReference(dslEClass, DSL__MISSIONS);
+    createEReference(dslEClass, DSL__TASKS);
+
     missionEClass = createEClass(MISSION);
     createEAttribute(missionEClass, MISSION__NAME);
     createEReference(missionEClass, MISSION__TASKS);
@@ -585,15 +654,18 @@ public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
     avoidEClass = createEClass(AVOID);
     createEAttribute(avoidEClass, AVOID__COLOR);
     createEAttribute(avoidEClass, AVOID__OBJECT);
-    createEReference(avoidEClass, AVOID__AVOID_ACTIONS);
+    createEReference(avoidEClass, AVOID__DRIVE_ACTIONS);
 
     driveActionEClass = createEClass(DRIVE_ACTION);
 
     moveBackEClass = createEClass(MOVE_BACK);
     createEAttribute(moveBackEClass, MOVE_BACK__METERS);
 
-    turnEClass = createEClass(TURN);
-    createEAttribute(turnEClass, TURN__DEGREES);
+    turnLeftEClass = createEClass(TURN_LEFT);
+    createEAttribute(turnLeftEClass, TURN_LEFT__DEGREES);
+
+    turnRightEClass = createEClass(TURN_RIGHT);
+    createEAttribute(turnRightEClass, TURN_RIGHT__DEGREES);
 
     // Create enums
     objectEEnum = createEEnum(OBJECT);
@@ -635,12 +707,17 @@ public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
     speakEClass.getESuperTypes().add(this.getAction());
     followLineEClass.getESuperTypes().add(this.getAction());
     moveBackEClass.getESuperTypes().add(this.getDriveAction());
-    turnEClass.getESuperTypes().add(this.getDriveAction());
+    turnLeftEClass.getESuperTypes().add(this.getDriveAction());
+    turnRightEClass.getESuperTypes().add(this.getDriveAction());
 
     // Initialize classes and features; add operations and parameters
+    initEClass(dslEClass, mars.ru.des.robot.taskDSL.DSL.class, "DSL", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDSL_Missions(), this.getMission(), null, "missions", null, 0, -1, mars.ru.des.robot.taskDSL.DSL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDSL_Tasks(), this.getTask(), null, "tasks", null, 0, -1, mars.ru.des.robot.taskDSL.DSL.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(missionEClass, Mission.class, "Mission", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMission_Name(), ecorePackage.getEString(), "name", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMission_Tasks(), this.getTask(), null, "tasks", null, 0, 1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMission_Tasks(), this.getTask(), null, "tasks", null, 0, -1, Mission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTask_Name(), ecorePackage.getEString(), "name", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -669,15 +746,18 @@ public class TaskDSLPackageImpl extends EPackageImpl implements TaskDSLPackage
     initEClass(avoidEClass, Avoid.class, "Avoid", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAvoid_Color(), this.getColor(), "color", null, 0, 1, Avoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAvoid_Object(), this.getObject(), "object", null, 0, 1, Avoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAvoid_AvoidActions(), this.getDriveAction(), null, "avoidActions", null, 0, -1, Avoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAvoid_DriveActions(), this.getDriveAction(), null, "driveActions", null, 0, -1, Avoid.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(driveActionEClass, DriveAction.class, "DriveAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(moveBackEClass, MoveBack.class, "MoveBack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMoveBack_Meters(), ecorePackage.getEInt(), "meters", null, 0, 1, MoveBack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(turnEClass, Turn.class, "Turn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTurn_Degrees(), ecorePackage.getEInt(), "degrees", null, 0, 1, Turn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(turnLeftEClass, TurnLeft.class, "TurnLeft", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTurnLeft_Degrees(), ecorePackage.getEInt(), "degrees", null, 0, 1, TurnLeft.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(turnRightEClass, TurnRight.class, "TurnRight", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTurnRight_Degrees(), ecorePackage.getEInt(), "degrees", null, 0, 1, TurnRight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(objectEEnum, mars.ru.des.robot.taskDSL.Object.class, "Object");

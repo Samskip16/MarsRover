@@ -1,4 +1,4 @@
-from src.util.singleton import Singleton
+from util.singleton import Singleton
 
 
 class Store(metaclass=Singleton):
