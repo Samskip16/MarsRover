@@ -16,4 +16,4 @@ class RockFinder(Action):
         if self.store.has_touched():
             return True
         else:
-            self.driver.drive(self.speed)
+            self.driver.drive_on(self.speed)

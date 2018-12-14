@@ -1,19 +1,17 @@
-from ev3dev.core import UltrasonicSensor
-
 from avoider.avoider import Avoider
+
+from util.store import Store
 
 
 class RockAvoider(Avoider):
 
     def __init__(self, drive_actions):
         self.drive_actions = drive_actions
-
-        self.us = UltrasonicSensor()
-        self.us.mode = 'US-DIST-CM'
+        self.store = Store()
 
     def triggered(self):
-        return self.us.value() < 380
+        return self.store.has_approached()
 
     def avoid(self):
         for a in self.drive_actions:
-            a.drive()
+            a.execute()

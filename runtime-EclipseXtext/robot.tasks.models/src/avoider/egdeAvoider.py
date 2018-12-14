@@ -14,7 +14,7 @@ class EdgeAvoider(Avoider):
         self.color = 6  # white
         self.drive_actions_lcs = [MoveAction(Speed.NORMAL, -200), RotateAction(Speed.NORMAL, -60)]  # L/C cs triggered
         self.drive_actions_rcs = [MoveAction(Speed.NORMAL, -200), RotateAction(Speed.NORMAL, 60)]  # R cs triggered
-        self.drive_actions_us = [MoveAction(Speed.NORMAL, 200), RotateAction(Speed.NORMAL, 0, -60)]  # Us triggered
+        self.drive_actions_us = [MoveAction(Speed.NORMAL, 200), RotateAction(Speed.NORMAL, -60)]  # Us triggered
 
         self.csL = ColorSensor(address=INPUT_1)
         self.csC = ColorSensor(address=INPUT_3)
