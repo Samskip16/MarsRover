@@ -21,7 +21,7 @@ class ListenerThread(threading.Thread):
             data = str(raw)
             data = data[2:-1]
 
-            print("Received: ", data)
+            # print("Received: ", data)
 
             for x in data.split(";"):
                 splitter = x.split("=")
@@ -38,5 +38,5 @@ class ListenerThread(threading.Thread):
                 elif key == "ts4":
                     self.store.ts4_state = value
                 elif key == "us":
-                    print("STORE: " + str(value))
+                    # print("STORE: " + str(value))
                     self.store.us_state = value

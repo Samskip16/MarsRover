@@ -10,7 +10,7 @@ class Bluetooth(metaclass=Singleton):
         self.server = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
         port = 3
 
-        self.server.bind(("CC:78:AB:4D:DC:04", port))
+        self.server.bind(("00:17:E9:B4:CE:E6", port))
         self.server.listen(1)
 
         self.client, address = self.server.accept()
@@ -20,7 +20,7 @@ class Bluetooth(metaclass=Singleton):
         self.client = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
         port = 3
 
-        self.client.connect(("CC:78:AB:4D:DC:04", port))
+        self.client.connect(("00:17:E9:B4:CE:E6", port))
         print("Connected!")
 
         self.listen()

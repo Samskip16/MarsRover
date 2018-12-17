@@ -2,6 +2,8 @@ from avoider.avoider import Avoider
 
 from util.store import Store
 
+from util import constant
+
 
 class RockAvoider(Avoider):
 
@@ -10,8 +12,10 @@ class RockAvoider(Avoider):
         self.store = Store()
 
     def triggered(self):
-        return self.store.has_approached()
+        if self.store.has_approached():
+            return constant.us_front_sensor_id
 
-    def avoid(self):
-        for a in self.drive_actions:
-            a.execute()
+        return -1
+
+    def actions(self):
+        return self.drive_actions

@@ -38,6 +38,9 @@ class Motor(metaclass=Singleton):
             degrees = abs(degrees)
             self.tank.on_for_degrees(SpeedPercent(0), SpeedPercent(per), degrees)
 
+    def is_running(self):
+        return self.tank.is_running
+
     def stop_drive(self):
         self.tank.stop()
 

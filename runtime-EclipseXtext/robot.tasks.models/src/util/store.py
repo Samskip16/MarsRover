@@ -12,5 +12,5 @@ class Store(metaclass=Singleton):
         return self.ts1_state or self.ts4_state
 
     def has_approached(self):
-        print("APPROACH: " + str(self.us_state))
+        # print("APPROACH: " + str(self.us_state))
         return self.us_state

@@ -6,6 +6,7 @@ from avoider.avoider import Avoider
 from drive.moveAction import MoveAction
 from drive.rotateAction import RotateAction
 from drive.speed import Speed
+from util import constant
 
 
 class EdgeAvoider(Avoider):
@@ -24,19 +25,22 @@ class EdgeAvoider(Avoider):
         self.us.mode = 'US-DIST-CM'
 
     def triggered(self):
-        return self.csL.color is self.color \
-               or self.csC.color is self.color \
-               or self.csR.color is self.color \
-               or self.us.value() > 40
+        if self.csL.color is self.color \
+                or self.csC.color is self.color \
+                or self.csR.color is self.color:
+            return constant.color_sensor_id
 
-    def avoid(self):
-        actions = []
-        if self.csL.color is self.color or self.csC.color is self.color:
-            actions = self.drive_actions_lcs
-        if self.csR.color is self.color:
-            actions = self.drive_actions_rcs
         if self.us.value() > 40:
-            actions = self.drive_actions_us
+            return constant.us_rear_sensor_id
 
-        for a in actions:
-            a.execute()
+        return -1
+
+    def actions(self):
+        if self.csL.color is self.color or self.csC.color is self.color:
+            return self.drive_actions_lcs
+        if self.csR.color is self.color:
+            return self.drive_actions_rcs
+        if self.us.value() > 40:
+            return self.drive_actions_us
+
+        return []

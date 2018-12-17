@@ -1,7 +1,7 @@
 class Avoider:
 
     def triggered(self):
-        return True
+        return -1
 
-    def avoid(self):
-        pass
+    def actions(self):
+        return

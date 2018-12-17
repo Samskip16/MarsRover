@@ -2,6 +2,8 @@ from ev3dev2.sensor.lego import ColorSensor
 
 from avoider.avoider import Avoider
 
+from util import constant
+
 
 class ColorAvoider(Avoider):
 
@@ -12,8 +14,10 @@ class ColorAvoider(Avoider):
         self.cs = ColorSensor()
 
     def triggered(self):
-        return self.cs.color in self.colors
+        if self.cs.color in self.colors:
+            return constant.color_sensor_id
 
-    def avoid(self):
-        for a in self.drive_actions:
-            a.execute()
+        return -1
+
+    def actions(self):
+        return self.drive_actions

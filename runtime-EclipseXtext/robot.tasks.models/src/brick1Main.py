@@ -25,7 +25,7 @@ task_Task1 = Task()
 task_Task1.set_action(ColorFinder([Color.GREEN], Speed.SLOW)
                       )
 
-task_Task1.add_avoider(ColorAvoider([Color.RED], [MoveAction(Speed.NORMAL, 10),
+task_Task1.add_avoider(ColorAvoider([Color.RED], [MoveAction(Speed.NORMAL, 100),
                                                   RotateAction(Speed.NORMAL, 3),
                                                   MoveAction(Speed.NORMAL, 100)
                                                   ])
